@@ -10,12 +10,18 @@ import UIKit
 
 class SANContentView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    fileprivate var childVcs : [UIViewController]
+    fileprivate var parentVc : UIViewController
+    
+    init(frame: CGRect, childVcs : [UIViewController], parentVc : UIViewController) {
+        self.childVcs = childVcs
+        self.parentVc = parentVc
+        
+        super.init(frame: frame)
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
 }

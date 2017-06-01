@@ -8,6 +8,8 @@
 
 import UIKit
 
-class SANTitleStyle: NSObject {
+class SANTitleStyle {
 
+    var titleHeight : CGFloat = 44
+    
 }

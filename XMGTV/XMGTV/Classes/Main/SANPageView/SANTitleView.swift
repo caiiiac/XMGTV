@@ -10,12 +10,16 @@ import UIKit
 
 class SANTitleView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    fileprivate var titles : [String]
+    
+    init(frame: CGRect, titles : [String]) {
+        self.titles = titles
+        
+        super.init(frame: frame)
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
 }
