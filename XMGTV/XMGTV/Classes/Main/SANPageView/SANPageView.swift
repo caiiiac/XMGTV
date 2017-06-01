@@ -43,7 +43,7 @@ extension SANPageView {
     
     private func setupTitleView() {
         let titleFrame = CGRect(x: 0, y: 0, width: bounds.width, height: style.titleHeight)
-        titleView = SANTitleView(frame: titleFrame, titles: titles)
+        titleView = SANTitleView(frame: titleFrame, titles: titles, style : style)
         addSubview(titleView)
     }
     
