@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EB1EE04B970063E5CF /* SANPageView.swift */; };
+		2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */; };
+		2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EF1EE04BC90063E5CF /* SANContentView.swift */; };
+		2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */; };
 		26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */; };
 		26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FA1EDEEEDA00CD1B2A /* Main.storyboard */; };
 		26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FD1EDEEEDA00CD1B2A /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2698C3EB1EE04B970063E5CF /* SANPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageView.swift; sourceTree = "<group>"; };
+		2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleView.swift; sourceTree = "<group>"; };
+		2698C3EF1EE04BC90063E5CF /* SANContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANContentView.swift; sourceTree = "<group>"; };
+		2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleStyle.swift; sourceTree = "<group>"; };
 		26FE83F31EDEEEDA00CD1B2A /* XMGTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMGTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FE83FB1EDEEEDA00CD1B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +98,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2698C3EA1EE04B7F0063E5CF /* SANPageView */ = {
+			isa = PBXGroup;
+			children = (
+				2698C3EB1EE04B970063E5CF /* SANPageView.swift */,
+				2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */,
+				2698C3EF1EE04BC90063E5CF /* SANContentView.swift */,
+				2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */,
+			);
+			path = SANPageView;
+			sourceTree = "<group>";
+		};
 		26FE83EA1EDEEEDA00CD1B2A = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +201,7 @@
 		26FE84281EDEEFB700CD1B2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2698C3EA1EE04B7F0063E5CF /* SANPageView */,
 				26FE843D1EDEFAC900CD1B2A /* Extension */,
 				26FE842B1EDEEFDB00CD1B2A /* Controller */,
 			);
@@ -368,8 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				26FE842D1EDEF00900CD1B2A /* MainViewController.swift in Sources */,
+				2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */,
 				26FE843F1EDEFAE900CD1B2A /* UIColor-Extension.swift in Sources */,
+				2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */,
 				26FE843C1EDEF79F00CD1B2A /* SANNavigationController.swift in Sources */,
+				2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */,
+				2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */,
 				26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */,
 				26FE843A1EDEF73C00CD1B2A /* RankViewController.swift in Sources */,
 				26FE84381EDEF6DB00CD1B2A /* HomeViewController.swift in Sources */,
@@ -625,6 +649,7 @@
 				26FE841D1EDEEEDA00CD1B2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26FE841E1EDEEEDA00CD1B2A /* Build configuration list for PBXNativeTarget "XMGTVTests" */ = {
 			isa = XCConfigurationList;
@@ -633,6 +658,7 @@
 				26FE84201EDEEEDA00CD1B2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26FE84211EDEEEDA00CD1B2A /* Build configuration list for PBXNativeTarget "XMGTVUITests" */ = {
 			isa = XCConfigurationList;
@@ -641,6 +667,7 @@
 				26FE84231EDEEEDA00CD1B2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
