@@ -51,5 +51,8 @@ extension SANPageView {
         let contentFrame = CGRect(x: 0, y: style.titleHeight, width: bounds.width, height: bounds.height - style.titleHeight)
         let contentView = SANContentView(frame: contentFrame, childVcs: childVcs, parentVc: parentVc)
         addSubview(contentView)
+        
+        //添加代理 
+        titleView.delegate = contentView
     }
 }
