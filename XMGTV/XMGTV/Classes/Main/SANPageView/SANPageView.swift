@@ -54,5 +54,6 @@ extension SANPageView {
         
         //添加代理 
         titleView.delegate = contentView
+        contentView.delegate = titleView
     }
 }

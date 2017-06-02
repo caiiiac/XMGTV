@@ -10,8 +10,13 @@ import UIKit
 
 private let kContentCellID = "kContentCellID"
 
+protocol SANContentViewDelegate : class {
+    func contentView(_ contentView : SANContentView, targetIndex : Int)
+}
 class SANContentView: UIView {
 
+    weak var delegate : SANContentViewDelegate?
+    
     fileprivate var childVcs : [UIViewController]
     fileprivate var parentVc : UIViewController
     
@@ -30,6 +35,7 @@ class SANContentView: UIView {
          collectionView.showsHorizontalScrollIndicator = false
         
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         return collectionView
     }()
@@ -85,6 +91,29 @@ extension SANContentView : UICollectionViewDataSource {
         
     }
 }
+
+//MARK: - UICollectionViewDelegate
+extension SANContentView : UICollectionViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        contentEndScroll()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            contentEndScroll()
+        }
+    }
+    
+    private func contentEndScroll() {
+        //计算当前位置
+        let currentIndex = Int(collectionView.contentOffset.x / collectionView.bounds.width)
+        
+        //通知title调整
+        delegate?.contentView(self, targetIndex: currentIndex)
+        
+    }
+}
+
 
 //MARK: - SANTitleViewDelegate
 extension SANContentView : SANTitleViewDelegate {

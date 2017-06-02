@@ -106,17 +106,27 @@ extension SANTitleView {
         
         //取出点击的label
         let targetLabel = tap.view as! UILabel
-        let sourceLabel = titleLabels[currentIndex]
         
-        //切换文字颜色
-        targetLabel.textColor = style.selectColor
-        sourceLabel.textColor = style.normalColor
-        
-        //记录下标
-        currentIndex = targetLabel.tag
+        //调整title
+        adjustTitleLabel(targetIndex: targetLabel.tag)
         
         //点击代理,content相应改变
         delegate?.titleView(self, targetIndex: currentIndex)
+
+    }
+    
+    fileprivate func adjustTitleLabel(targetIndex : Int) {
+        //取出点击的label
+        let targetLabel = titleLabels[targetIndex]
+        let sourceLabel = titleLabels[currentIndex]
+        
+        //切换文字颜色
+        sourceLabel.textColor = style.normalColor
+        targetLabel.textColor = style.selectColor
+        
+        
+        //记录下标
+        currentIndex = targetLabel.tag
         
         //调整位置
         if style.isScrollEnable {
@@ -131,7 +141,13 @@ extension SANTitleView {
             
             scrollView.setContentOffset(CGPoint(x : offsetX, y : 0), animated: true)
         }
-        
+
     }
 }
 
+//MARK: - SANContentViewDelegate
+extension SANTitleView : SANContentViewDelegate {
+    func contentView(_ contentView: SANContentView, targetIndex: Int) {
+        adjustTitleLabel(targetIndex: targetIndex)
+    }
+}
