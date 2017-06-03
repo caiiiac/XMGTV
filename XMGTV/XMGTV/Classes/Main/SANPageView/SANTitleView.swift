@@ -150,4 +150,9 @@ extension SANTitleView : SANContentViewDelegate {
     func contentView(_ contentView: SANContentView, targetIndex: Int) {
         adjustTitleLabel(targetIndex: targetIndex)
     }
+    
+    func contentView(_ contentView: SANContentView, targetIndex: Int, progress: CGFloat) {
+        print(targetIndex)
+        print(progress)
+    }
 }

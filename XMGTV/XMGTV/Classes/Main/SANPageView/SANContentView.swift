@@ -12,6 +12,7 @@ private let kContentCellID = "kContentCellID"
 
 protocol SANContentViewDelegate : class {
     func contentView(_ contentView : SANContentView, targetIndex : Int)
+    func contentView(_ contentView : SANContentView, targetIndex : Int, progress :CGFloat)
 }
 class SANContentView: UIView {
 
@@ -20,6 +21,7 @@ class SANContentView: UIView {
     fileprivate var childVcs : [UIViewController]
     fileprivate var parentVc : UIViewController
     
+    fileprivate lazy var startOffsetX : CGFloat = 0
     fileprivate lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = self.bounds.size
@@ -111,6 +113,39 @@ extension SANContentView : UICollectionViewDelegate {
         //通知title调整
         delegate?.contentView(self, targetIndex: currentIndex)
         
+    }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startOffsetX = scrollView.contentOffset.x
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //判断偏移量是否和开始时一样
+        guard startOffsetX != scrollView.contentOffset.x else {
+            return
+        }
+        
+        //定义targetIndex/progress
+        var targetIndex = 0
+        var progress : CGFloat = 0.0
+        
+        //赋值
+        let currentIndex = Int(startOffsetX / scrollView.bounds.width)
+        if startOffsetX < scrollView.contentOffset.x {  //左滑
+            targetIndex = currentIndex + 1
+            if targetIndex > childVcs.count - 1 {
+                targetIndex = childVcs.count - 1
+            }
+            
+            progress = (scrollView.contentOffset.x - startOffsetX) / scrollView.bounds.width
+        } else {    //右滑动
+            targetIndex = currentIndex - 1
+            if targetIndex < 0 {
+                targetIndex = 0
+            }
+            
+            progress = (startOffsetX - scrollView.contentOffset.x) / scrollView.bounds.width 
+        }
+        //通知代理
+        delegate?.contentView(self, targetIndex: targetIndex, progress: progress)
     }
 }
 
