@@ -25,5 +25,9 @@ class SANTitleStyle {
     //item间距
     var itemMargin : CGFloat = 30
     
+    //滚动条相关
+    var isShowScrollLine : Bool = false
+    var scrollLineHeight : CGFloat = 2
+    var scrollLineColor: UIColor = .orange
     
 }
