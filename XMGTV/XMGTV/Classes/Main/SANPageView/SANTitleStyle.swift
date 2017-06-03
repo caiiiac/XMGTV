@@ -13,8 +13,8 @@ class SANTitleStyle {
     var titleHeight : CGFloat = 44
     
     //标题默认及选中颜色
-    var normalColor : UIColor = .black
-    var selectColor : UIColor = .orange
+    var normalColor : UIColor = UIColor(r: 0, g: 0, b: 0)
+    var selectColor : UIColor = UIColor(r: 255, g: 127, b: 0)
     
     //字体
     var fontSize : CGFloat = 15
