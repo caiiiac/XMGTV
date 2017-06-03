@@ -28,6 +28,14 @@ class SANTitleView: UIView {
         
         return scrollView
     }()
+    fileprivate lazy var bottomLine : UIView = {
+        let view = UIView()
+        view.backgroundColor = self.style.scrollLineColor
+        view.frame.size.height = self.style.scrollLineHeight
+        view.frame.origin.y = self.bounds.height - self.style.scrollLineHeight
+        
+        return view
+    }()
     
     init(frame: CGRect, titles : [String], style : SANTitleStyle) {
         self.titles = titles
@@ -54,6 +62,11 @@ extension SANTitleView {
         
         //设置标题label的fram
         setupTitleLabelsFrame()
+        
+        //添加滚动条
+        if style.isShowScrollLine {
+            scrollView.addSubview(bottomLine)
+        }
     }
     
     private func setupTitleLabels() {
@@ -88,9 +101,19 @@ extension SANTitleView {
             if style.isScrollEnable {
                 w = (titles[i] as NSString).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 0), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName : label.font], context: nil).width
                 x = (i == 0 ? (style.itemMargin * 0.5) : (titleLabels[i - 1]).frame.maxX + style.itemMargin)
+            
+                if i == 0 && style.isShowScrollLine {
+                    bottomLine.frame.origin.x = x
+                    bottomLine.frame.size.width = w
+                }
             } else {
                 w = bounds.width / CGFloat(count)
                 x = w * CGFloat(i)
+                
+                if i == 0 && style.isShowScrollLine {
+                    bottomLine.frame.origin.x = 0
+                    bottomLine.frame.size.width = w
+                }
             }
             
             label.frame = CGRect(x: x, y: y, width: w, height: h)
@@ -109,6 +132,14 @@ extension SANTitleView {
         
         //调整title
         adjustTitleLabel(targetIndex: targetLabel.tag)
+        
+        //调整滚动条
+        if style.isShowScrollLine {
+            UIView.animate(withDuration: 0.25, animations: { 
+                self.bottomLine.frame.origin.x = targetLabel.frame.origin.x
+                self.bottomLine.frame.size.width = targetLabel.frame.width
+            })
+        }
         
         //点击代理,content相应改变
         delegate?.titleView(self, targetIndex: currentIndex)
@@ -164,5 +195,12 @@ extension SANTitleView : SANContentViewDelegate {
         targetLabel.textColor = UIColor(r: normalRGB.0 + deltaRGB.0 * progress, g: normalRGB.1 + deltaRGB.1 * progress, b: normalRGB.2 + deltaRGB.2 * progress)
         sourceLabel.textColor = UIColor(r: selectRGB.0 - deltaRGB.0 * progress, g: selectRGB.1 - deltaRGB.1 * progress, b: selectRGB.2 - deltaRGB.2 * progress)
         
+        //bottomLine渐变
+        if style.isShowScrollLine {
+            let deltaX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+            let deltaW = targetLabel.frame.width - sourceLabel.frame.width
+            bottomLine.frame.origin.x = sourceLabel.frame.origin.x + deltaX * progress
+            bottomLine.frame.size.width = sourceLabel.frame.width + deltaW * progress
+        }
     }
 }
