@@ -21,7 +21,10 @@ class SANContentView: UIView {
     fileprivate var childVcs : [UIViewController]
     fileprivate var parentVc : UIViewController
     
-    fileprivate lazy var startOffsetX : CGFloat = 0
+    fileprivate var startOffsetX : CGFloat = 0
+    //是否禁滚动
+    fileprivate var isForbidScroll : Bool = false
+    
     fileprivate lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = self.bounds.size
@@ -107,6 +110,10 @@ extension SANContentView : UICollectionViewDelegate {
     }
     
     private func contentEndScroll() {
+        
+        guard !isForbidScroll else {
+            return
+        }
         //计算当前位置
         let currentIndex = Int(collectionView.contentOffset.x / collectionView.bounds.width)
         
@@ -115,11 +122,12 @@ extension SANContentView : UICollectionViewDelegate {
         
     }
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+         isForbidScroll = false
         startOffsetX = scrollView.contentOffset.x
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         //判断偏移量是否和开始时一样
-        guard startOffsetX != scrollView.contentOffset.x else {
+        guard startOffsetX != scrollView.contentOffset.x, !isForbidScroll else {
             return
         }
         
@@ -153,6 +161,9 @@ extension SANContentView : UICollectionViewDelegate {
 //MARK: - SANTitleViewDelegate
 extension SANContentView : SANTitleViewDelegate {
     func titleView(_ titleView: SANTitleView, targetIndex: Int) {
+        
+        isForbidScroll = true
+        
         let indexPath = IndexPath(item: targetIndex, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
         
