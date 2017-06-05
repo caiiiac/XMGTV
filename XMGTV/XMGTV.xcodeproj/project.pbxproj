@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269663871EE59FCA001C0085 /* SANWaterfallFlowLayout.swift */; };
 		2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EB1EE04B970063E5CF /* SANPageView.swift */; };
 		2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */; };
 		2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EF1EE04BC90063E5CF /* SANContentView.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		269663871EE59FCA001C0085 /* SANWaterfallFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANWaterfallFlowLayout.swift; sourceTree = "<group>"; };
 		2698C3EB1EE04B970063E5CF /* SANPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageView.swift; sourceTree = "<group>"; };
 		2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleView.swift; sourceTree = "<group>"; };
 		2698C3EF1EE04BC90063E5CF /* SANContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		269663861EE59C8C001C0085 /* SANWaterfall */ = {
+			isa = PBXGroup;
+			children = (
+				269663871EE59FCA001C0085 /* SANWaterfallFlowLayout.swift */,
+			);
+			path = SANWaterfall;
+			sourceTree = "<group>";
+		};
 		2698C3EA1EE04B7F0063E5CF /* SANPageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 		26FE84281EDEEFB700CD1B2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				269663861EE59C8C001C0085 /* SANWaterfall */,
 				2698C3EA1EE04B7F0063E5CF /* SANPageView */,
 				26FE843D1EDEFAC900CD1B2A /* Extension */,
 				26FE842B1EDEEFDB00CD1B2A /* Controller */,
@@ -394,6 +405,7 @@
 				26FE843C1EDEF79F00CD1B2A /* SANNavigationController.swift in Sources */,
 				2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */,
 				2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */,
+				269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */,
 				26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */,
 				26FE843A1EDEF73C00CD1B2A /* RankViewController.swift in Sources */,
 				26FE84381EDEF6DB00CD1B2A /* HomeViewController.swift in Sources */,
