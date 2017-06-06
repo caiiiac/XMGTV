@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
         
         setupUI()
         
-        
     }
 
 }
@@ -26,6 +25,25 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     fileprivate func setupUI() {
         setupNavigationBar()
+        automaticallyAdjustsScrollViewInsets = false
+        let frame = CGRect(x: 0, y: 64, width: view.bounds.width, height: view.bounds.height - 64 - 49)
+        
+        let titles = ["全部", "娱乐", "搞笑","搞搞笑搞笑笑","搞笑","搞搞笑笑","搞笑","搞笑","搞搞笑搞笑搞笑笑"]
+        var vcs = [UIViewController]()
+        for _ in titles {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor.randomColor()
+            
+            vcs.append(vc)
+            
+        }
+        let style = SANTitleStyle()
+        style.isScrollEnable = true
+        style.isShowScrollLine = true
+        
+        let page = SANPageView(frame: frame, titles: titles, childVcs: vcs, parentVc: self, style: style)
+        view.addSubview(page)
+        
     }
     
     fileprivate func setupNavigationBar() {
