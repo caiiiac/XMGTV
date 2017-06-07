@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="q3I-e3-CIr" customClass="FocusViewCell" customModule="XMGTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q3I-e3-CIr" id="QDJ-pp-i8a">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XeP-Qz-RWU">
+                        <rect key="frame" x="10" y="48" width="310" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="LYS-7i-0Kt"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l9t-nX-rRB">
+                        <rect key="frame" x="20" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="nzk-uH-XVf"/>
+                            <constraint firstAttribute="width" secondItem="l9t-nX-rRB" secondAttribute="height" multiplier="1:1" id="xak-21-lSu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="妍宝宝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0u-pM-2oZ">
+                        <rect key="frame" x="75" y="17" width="43" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center_icon_follow_zhibo" translatesAutoresizingMaskIntoConstraints="NO" id="kgp-4G-JeO">
+                        <rect key="frame" x="276" y="18" width="24" height="14"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="XeP-Qz-RWU" secondAttribute="bottom" id="2Kx-R3-eO1"/>
+                    <constraint firstItem="l9t-nX-rRB" firstAttribute="leading" secondItem="QDJ-pp-i8a" secondAttribute="leading" constant="20" id="CWu-1I-UP8"/>
+                    <constraint firstItem="XeP-Qz-RWU" firstAttribute="leading" secondItem="QDJ-pp-i8a" secondAttribute="leading" constant="10" id="O67-fw-Wkj"/>
+                    <constraint firstItem="l9t-nX-rRB" firstAttribute="centerY" secondItem="QDJ-pp-i8a" secondAttribute="centerY" id="Se1-Js-Ky8"/>
+                    <constraint firstAttribute="trailing" secondItem="kgp-4G-JeO" secondAttribute="trailing" constant="20" id="W71-Tj-4Hx"/>
+                    <constraint firstItem="kgp-4G-JeO" firstAttribute="centerY" secondItem="V0u-pM-2oZ" secondAttribute="centerY" id="Zwx-Q6-qti"/>
+                    <constraint firstItem="V0u-pM-2oZ" firstAttribute="centerY" secondItem="l9t-nX-rRB" secondAttribute="centerY" id="dUo-nd-7gG"/>
+                    <constraint firstItem="V0u-pM-2oZ" firstAttribute="leading" secondItem="l9t-nX-rRB" secondAttribute="trailing" constant="15" id="n9E-g6-bJn"/>
+                    <constraint firstAttribute="trailing" secondItem="XeP-Qz-RWU" secondAttribute="trailing" id="sdF-Yk-WGb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="l9t-nX-rRB" id="DKa-dm-ub9"/>
+                <outlet property="liveImageView" destination="kgp-4G-JeO" id="gQF-4h-86U"/>
+                <outlet property="nickNameLabel" destination="V0u-pM-2oZ" id="hoR-i7-1X9"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="center_icon_follow_zhibo" width="24" height="14"/>
+    </resources>
+</document>
