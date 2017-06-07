@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC141EE84EE0002F0B20 /* BaseModel.swift */; };
+		2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC161EE84F4F002F0B20 /* HomeType.swift */; };
+		2664DC191EE84F88002F0B20 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC181EE84F88002F0B20 /* AnchorModel.swift */; };
+		2664DC1C1EE84FF0002F0B20 /* SqliteTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC1B1EE84FF0002F0B20 /* SqliteTools.swift */; };
+		2664DC1F1EE85048002F0B20 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2664DC1E1EE85048002F0B20 /* libsqlite3.0.tbd */; };
+		2664DC211EE85053002F0B20 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2664DC201EE85053002F0B20 /* libz.tbd */; };
+		2664DC231EE85090002F0B20 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC221EE85090002F0B20 /* HomeViewModel.swift */; };
+		2664DC251EE850D6002F0B20 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC241EE850D6002F0B20 /* NetworkTools.swift */; };
+		2664DC271EE85284002F0B20 /* FucusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC261EE85284002F0B20 /* FucusViewModel.swift */; };
+		2664DC291EE852BD002F0B20 /* AnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC281EE852BD002F0B20 /* AnchorViewController.swift */; };
+		2664DC2B1EE85301002F0B20 /* FucusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC2A1EE85301002F0B20 /* FucusViewController.swift */; };
+		2664DC2E1EE8534D002F0B20 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC2C1EE8534D002F0B20 /* HomeViewCell.swift */; };
+		2664DC2F1EE8534D002F0B20 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2664DC2D1EE8534D002F0B20 /* HomeViewCell.xib */; };
+		2664DC321EE85372002F0B20 /* FocusViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC301EE85372002F0B20 /* FocusViewCell.swift */; };
+		2664DC331EE85372002F0B20 /* FocusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2664DC311EE85372002F0B20 /* FocusViewCell.xib */; };
+		2664DC351EE85465002F0B20 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC341EE85465002F0B20 /* KingfisherExtension.swift */; };
 		269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269663871EE59FCA001C0085 /* SANWaterfallFlowLayout.swift */; };
 		2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EB1EE04B970063E5CF /* SANPageView.swift */; };
 		2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */; };
@@ -28,6 +44,7 @@
 		26FE843A1EDEF73C00CD1B2A /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE84391EDEF73C00CD1B2A /* RankViewController.swift */; };
 		26FE843C1EDEF79F00CD1B2A /* SANNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE843B1EDEF79F00CD1B2A /* SANNavigationController.swift */; };
 		26FE843F1EDEFAE900CD1B2A /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE843E1EDEFAE900CD1B2A /* UIColor-Extension.swift */; };
+		A3497EAE0F1C9DC80334AC60 /* Pods_XMGTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FF21B9FECD5C8E145F103F /* Pods_XMGTV.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +65,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2664DC141EE84EE0002F0B20 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		2664DC161EE84F4F002F0B20 /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
+		2664DC181EE84F88002F0B20 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		2664DC1B1EE84FF0002F0B20 /* SqliteTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteTools.swift; sourceTree = "<group>"; };
+		2664DC1E1EE85048002F0B20 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		2664DC201EE85053002F0B20 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2664DC221EE85090002F0B20 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2664DC241EE850D6002F0B20 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		2664DC261EE85284002F0B20 /* FucusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FucusViewModel.swift; sourceTree = "<group>"; };
+		2664DC281EE852BD002F0B20 /* AnchorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorViewController.swift; sourceTree = "<group>"; };
+		2664DC2A1EE85301002F0B20 /* FucusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FucusViewController.swift; sourceTree = "<group>"; };
+		2664DC2C1EE8534D002F0B20 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		2664DC2D1EE8534D002F0B20 /* HomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		2664DC301EE85372002F0B20 /* FocusViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewCell.swift; sourceTree = "<group>"; };
+		2664DC311EE85372002F0B20 /* FocusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusViewCell.xib; sourceTree = "<group>"; };
+		2664DC341EE85465002F0B20 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		269663871EE59FCA001C0085 /* SANWaterfallFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANWaterfallFlowLayout.swift; sourceTree = "<group>"; };
 		2698C3EB1EE04B970063E5CF /* SANPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageView.swift; sourceTree = "<group>"; };
 		2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleView.swift; sourceTree = "<group>"; };
@@ -75,6 +108,9 @@
 		26FE84391EDEF73C00CD1B2A /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		26FE843B1EDEF79F00CD1B2A /* SANNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANNavigationController.swift; sourceTree = "<group>"; };
 		26FE843E1EDEFAE900CD1B2A /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		70FF21B9FECD5C8E145F103F /* Pods_XMGTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMGTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BEAA7BACE167411F2A2CB53 /* Pods-XMGTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMGTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMGTV/Pods-XMGTV.release.xcconfig"; sourceTree = "<group>"; };
+		DD8F000A871AA37A7A7D4A4E /* Pods-XMGTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMGTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMGTV/Pods-XMGTV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +118,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2664DC211EE85053002F0B20 /* libz.tbd in Frameworks */,
+				2664DC1F1EE85048002F0B20 /* libsqlite3.0.tbd in Frameworks */,
+				A3497EAE0F1C9DC80334AC60 /* Pods_XMGTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +141,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2664DC101EE84E8F002F0B20 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2664DC2C1EE8534D002F0B20 /* HomeViewCell.swift */,
+				2664DC2D1EE8534D002F0B20 /* HomeViewCell.xib */,
+				2664DC301EE85372002F0B20 /* FocusViewCell.swift */,
+				2664DC311EE85372002F0B20 /* FocusViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2664DC111EE84E8F002F0B20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2664DC161EE84F4F002F0B20 /* HomeType.swift */,
+				2664DC181EE84F88002F0B20 /* AnchorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2664DC121EE84E8F002F0B20 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2664DC221EE85090002F0B20 /* HomeViewModel.swift */,
+				2664DC261EE85284002F0B20 /* FucusViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2664DC131EE84EBC002F0B20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2664DC141EE84EE0002F0B20 /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2664DC1A1EE84FD1002F0B20 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2664DC1B1EE84FF0002F0B20 /* SqliteTools.swift */,
+				2664DC241EE850D6002F0B20 /* NetworkTools.swift */,
+				2664DC341EE85465002F0B20 /* KingfisherExtension.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2664DC1D1EE85048002F0B20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2664DC201EE85053002F0B20 /* libz.tbd */,
+				2664DC1E1EE85048002F0B20 /* libsqlite3.0.tbd */,
+				70FF21B9FECD5C8E145F103F /* Pods_XMGTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		269663861EE59C8C001C0085 /* SANWaterfall */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +232,8 @@
 				26FE840A1EDEEEDA00CD1B2A /* XMGTVTests */,
 				26FE84151EDEEEDA00CD1B2A /* XMGTVUITests */,
 				26FE83F41EDEEEDA00CD1B2A /* Products */,
+				2664DC1D1EE85048002F0B20 /* Frameworks */,
+				D30725F28A0B0B016966AD29 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,6 +288,7 @@
 				26FE842A1EDEEFB700CD1B2A /* Rank */,
 				26FE84261EDEEFB700CD1B2A /* Discover */,
 				26FE84291EDEEFB700CD1B2A /* Profile */,
+				2664DC1A1EE84FD1002F0B20 /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -197,6 +296,7 @@
 		26FE84251EDEEFB700CD1B2A /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2664DC131EE84EBC002F0B20 /* Model */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -212,6 +312,9 @@
 		26FE84271EDEEFB700CD1B2A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2664DC101EE84E8F002F0B20 /* Cell */,
+				2664DC111EE84E8F002F0B20 /* Model */,
+				2664DC121EE84E8F002F0B20 /* ViewModel */,
 				26FE84361EDEF6BF00CD1B2A /* Controller */,
 				26FE842E1EDEF12E00CD1B2A /* Home.storyboard */,
 				26FE84371EDEF6DB00CD1B2A /* HomeViewController.swift */,
@@ -259,6 +362,8 @@
 		26FE84361EDEF6BF00CD1B2A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2664DC281EE852BD002F0B20 /* AnchorViewController.swift */,
+				2664DC2A1EE85301002F0B20 /* FucusViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +376,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		D30725F28A0B0B016966AD29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD8F000A871AA37A7A7D4A4E /* Pods-XMGTV.debug.xcconfig */,
+				7BEAA7BACE167411F2A2CB53 /* Pods-XMGTV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,9 +392,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26FE841B1EDEEEDA00CD1B2A /* Build configuration list for PBXNativeTarget "XMGTV" */;
 			buildPhases = (
+				B6AB4BE5074A90C612C31177 /* [CP] Check Pods Manifest.lock */,
 				26FE83EF1EDEEEDA00CD1B2A /* Sources */,
 				26FE83F01EDEEEDA00CD1B2A /* Frameworks */,
 				26FE83F11EDEEEDA00CD1B2A /* Resources */,
+				485AE7CE277A3D5EC6747BF0 /* [CP] Embed Pods Frameworks */,
+				03F127B88AA7B263E72852A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,7 +498,9 @@
 				26FE84331EDEF14F00CD1B2A /* Profile.storyboard in Resources */,
 				26FE84351EDEF15900CD1B2A /* Rank.storyboard in Resources */,
 				26C951B81EE6FBF5008DA4B3 /* types.plist in Resources */,
+				2664DC2F1EE8534D002F0B20 /* HomeViewCell.xib in Resources */,
 				26FE84011EDEEEDA00CD1B2A /* LaunchScreen.storyboard in Resources */,
+				2664DC331EE85372002F0B20 /* FocusViewCell.xib in Resources */,
 				26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */,
 				26FE84311EDEF14300CD1B2A /* Discover.storyboard in Resources */,
 				26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */,
@@ -405,18 +524,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03F127B88AA7B263E72852A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMGTV/Pods-XMGTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		485AE7CE277A3D5EC6747BF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMGTV/Pods-XMGTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6AB4BE5074A90C612C31177 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		26FE83EF1EDEEEDA00CD1B2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				26FE842D1EDEF00900CD1B2A /* MainViewController.swift in Sources */,
+				2664DC2B1EE85301002F0B20 /* FucusViewController.swift in Sources */,
+				2664DC2E1EE8534D002F0B20 /* HomeViewCell.swift in Sources */,
+				2664DC251EE850D6002F0B20 /* NetworkTools.swift in Sources */,
 				2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */,
 				26FE843F1EDEFAE900CD1B2A /* UIColor-Extension.swift in Sources */,
+				2664DC231EE85090002F0B20 /* HomeViewModel.swift in Sources */,
+				2664DC271EE85284002F0B20 /* FucusViewModel.swift in Sources */,
 				2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */,
 				26FE843C1EDEF79F00CD1B2A /* SANNavigationController.swift in Sources */,
 				2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */,
+				2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */,
+				2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */,
+				2664DC191EE84F88002F0B20 /* AnchorModel.swift in Sources */,
+				2664DC1C1EE84FF0002F0B20 /* SqliteTools.swift in Sources */,
+				2664DC321EE85372002F0B20 /* FocusViewCell.swift in Sources */,
+				2664DC291EE852BD002F0B20 /* AnchorViewController.swift in Sources */,
 				2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */,
+				2664DC351EE85465002F0B20 /* KingfisherExtension.swift in Sources */,
 				269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */,
 				26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */,
 				26FE843A1EDEF73C00CD1B2A /* RankViewController.swift in Sources */,
@@ -572,11 +751,12 @@
 		};
 		26FE841C1EDEEEDA00CD1B2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD8F000A871AA37A7A7D4A4E /* Pods-XMGTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = XMGTV/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caiiiac.XMGTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -587,11 +767,12 @@
 		};
 		26FE841D1EDEEEDA00CD1B2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BEAA7BACE167411F2A2CB53 /* Pods-XMGTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = XMGTV/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caiiiac.XMGTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
