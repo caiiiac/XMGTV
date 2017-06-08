@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoomViewController" customModule="XMGTV" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="taO-jQ-YWn">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J6l-Eg-6AP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sIq-QS-Wn3" userLabel="顶部的View">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kk-Lb-Ms2" userLabel="聊天">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="room_btn_chat"/>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hl7-Ct-R2n" userLabel="分享">
+                            <rect key="frame" x="75" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="menu_btn_share"/>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0W-jJ-CWz" userLabel="礼物">
+                            <rect key="frame" x="150" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="room_btn_gift"/>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynz-2k-mSn" userLabel="更多">
+                            <rect key="frame" x="225" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="room_btn_more"/>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90b-MQ-IoF" userLabel="星星">
+                            <rect key="frame" x="300" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="room_btn_qfstar"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="KhS-JU-iev"/>
+                        <constraint firstAttribute="height" constant="44" id="XrR-qg-LPJ"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czS-a5-FWz">
+                    <rect key="frame" x="10" y="30" width="188" height="32"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6lz-o4-A7R">
+                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="6lz-o4-A7R" secondAttribute="height" multiplier="1:1" id="LYA-LC-pgZ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新人倩倩求爆个灯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrd-zs-Vhh">
+                            <rect key="frame" x="40" y="2" width="90" height="13.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房间号：6051463" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTh-gu-yj8">
+                            <rect key="frame" x="40" y="18" width="76.5" height="11"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYp-KV-1Vh">
+                            <rect key="frame" x="138" y="7" width="50" height="18"/>
+                            <color key="backgroundColor" red="0.81176470590000005" green="0.58431372550000005" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="Kg2-0b-Cm7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="关注"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="jrd-zs-Vhh" firstAttribute="leading" secondItem="6lz-o4-A7R" secondAttribute="trailing" constant="8" id="8FE-cX-k8N"/>
+                        <constraint firstAttribute="bottom" secondItem="6lz-o4-A7R" secondAttribute="bottom" id="8NJ-8p-flm"/>
+                        <constraint firstItem="6lz-o4-A7R" firstAttribute="top" secondItem="czS-a5-FWz" secondAttribute="top" id="F6J-rU-lYp"/>
+                        <constraint firstItem="fYp-KV-1Vh" firstAttribute="leading" secondItem="jrd-zs-Vhh" secondAttribute="trailing" constant="8" id="Fn0-ZI-wvd"/>
+                        <constraint firstItem="jrd-zs-Vhh" firstAttribute="top" secondItem="czS-a5-FWz" secondAttribute="top" constant="2" id="M3P-Oe-r9c"/>
+                        <constraint firstItem="gTh-gu-yj8" firstAttribute="leading" secondItem="6lz-o4-A7R" secondAttribute="trailing" constant="8" id="Nze-f3-Ffo"/>
+                        <constraint firstAttribute="bottom" secondItem="gTh-gu-yj8" secondAttribute="bottom" constant="3" id="Ohg-0z-29L"/>
+                        <constraint firstAttribute="trailing" secondItem="fYp-KV-1Vh" secondAttribute="trailing" id="Yxw-AX-aHU"/>
+                        <constraint firstItem="6lz-o4-A7R" firstAttribute="leading" secondItem="czS-a5-FWz" secondAttribute="leading" id="cjf-vB-Rws"/>
+                        <constraint firstItem="fYp-KV-1Vh" firstAttribute="top" secondItem="czS-a5-FWz" secondAttribute="top" constant="7" id="d1y-DP-b2c"/>
+                        <constraint firstAttribute="height" constant="32" id="oQ0-9t-ic1"/>
+                        <constraint firstAttribute="bottom" secondItem="fYp-KV-1Vh" secondAttribute="bottom" constant="7" id="zBS-aF-7AY"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0E-pj-jjw" userLabel="关闭">
+                    <rect key="frame" x="315" y="20" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="1Iw-uO-1Hj"/>
+                        <constraint firstAttribute="height" constant="50" id="ov0-3E-beQ"/>
+                    </constraints>
+                    <state key="normal" image="menu_btn_close"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBY-xW-whs">
+                    <rect key="frame" x="265" y="20" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="4Hy-bj-JjW"/>
+                        <constraint firstAttribute="height" constant="50" id="4og-v7-yBS"/>
+                    </constraints>
+                    <state key="normal" image="zhibo_btn_people"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sIq-QS-Wn3" firstAttribute="leading" secondItem="taO-jQ-YWn" secondAttribute="leading" id="3mL-MV-bQn"/>
+                <constraint firstItem="w0E-pj-jjw" firstAttribute="leading" secondItem="qBY-xW-whs" secondAttribute="trailing" id="4cm-vS-8c1"/>
+                <constraint firstAttribute="trailing" secondItem="w0E-pj-jjw" secondAttribute="trailing" constant="10" id="76l-rL-FnZ"/>
+                <constraint firstAttribute="trailing" secondItem="sIq-QS-Wn3" secondAttribute="trailing" id="A9r-vQ-YQA"/>
+                <constraint firstAttribute="trailing" secondItem="J6l-Eg-6AP" secondAttribute="trailing" id="DKe-7p-d6N"/>
+                <constraint firstItem="czS-a5-FWz" firstAttribute="top" secondItem="taO-jQ-YWn" secondAttribute="top" constant="30" id="Dl2-PY-UYc"/>
+                <constraint firstItem="qBY-xW-whs" firstAttribute="top" secondItem="taO-jQ-YWn" secondAttribute="top" constant="20" id="RP0-x3-wbg"/>
+                <constraint firstItem="J6l-Eg-6AP" firstAttribute="top" secondItem="taO-jQ-YWn" secondAttribute="top" id="ZJX-33-edA"/>
+                <constraint firstAttribute="bottom" secondItem="sIq-QS-Wn3" secondAttribute="bottom" id="gUO-p7-dEI"/>
+                <constraint firstAttribute="bottom" secondItem="J6l-Eg-6AP" secondAttribute="bottom" id="kzq-rZ-32p"/>
+                <constraint firstItem="w0E-pj-jjw" firstAttribute="top" secondItem="taO-jQ-YWn" secondAttribute="top" constant="20" id="pB2-Uw-RyG"/>
+                <constraint firstItem="J6l-Eg-6AP" firstAttribute="leading" secondItem="taO-jQ-YWn" secondAttribute="leading" id="tad-Kh-dEP"/>
+                <constraint firstItem="czS-a5-FWz" firstAttribute="leading" secondItem="taO-jQ-YWn" secondAttribute="leading" constant="10" id="u7B-XF-Xoi"/>
+            </constraints>
+            <point key="canvasLocation" x="45.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menu_btn_close" width="16" height="16"/>
+        <image name="menu_btn_share" width="25" height="25"/>
+        <image name="room_btn_chat" width="23" height="23"/>
+        <image name="room_btn_gift" width="23" height="24"/>
+        <image name="room_btn_more" width="23" height="23"/>
+        <image name="room_btn_qfstar" width="23" height="23"/>
+        <image name="zhibo_btn_people" width="20" height="16"/>
+    </resources>
+</document>
