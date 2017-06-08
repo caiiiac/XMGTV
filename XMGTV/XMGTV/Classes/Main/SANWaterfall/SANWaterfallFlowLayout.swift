@@ -9,71 +9,81 @@
 import UIKit
 
 
-protocol SANWaterfallFlowLayoutDataSource : class {
-    func numberOfCols(_ waterfall : SANWaterfallFlowLayout) -> Int
-    func waterfall(_ waterfall : SANWaterfallFlowLayout, item : Int) -> CGFloat
-    
+@objc protocol SANWaterfallLayoutDataSource : class {
+    func waterfallLayout(_ layout : SANWaterfallFlowLayout, indexPath : IndexPath) -> CGFloat
+    @objc optional func numberOfColsInWaterfallLayout(_ layout : SANWaterfallFlowLayout) -> Int
 }
 
 class SANWaterfallFlowLayout: UICollectionViewFlowLayout {
-
-    weak var dataSource : SANWaterfallFlowLayoutDataSource?
     
-    fileprivate lazy var cellAttrs : [UICollectionViewLayoutAttributes] = [UICollectionViewLayoutAttributes]()
-    fileprivate lazy var cols : Int = {
-       return self.dataSource?.numberOfCols(self) ?? 2
+    // MARK: 对外提供属性
+    weak var dataSource : SANWaterfallLayoutDataSource?
+    
+    // MARK: 私有属性
+    fileprivate lazy var attrsArray : [UICollectionViewLayoutAttributes] = [UICollectionViewLayoutAttributes]()
+    fileprivate var totalHeight : CGFloat = 0
+    fileprivate lazy var colHeights : [CGFloat] = {
+        let cols = self.dataSource?.numberOfColsInWaterfallLayout?(self) ?? 2
+        var colHeights = Array(repeating: self.sectionInset.top, count: cols)
+        return colHeights
     }()
-    fileprivate lazy var totalHeights : [CGFloat] = Array(repeating: self.sectionInset.top, count: self.cols)
+    fileprivate var maxH : CGFloat = 0
+    fileprivate var startIndex = 0
 }
 
-//MARK: - 准备布局
+
 extension SANWaterfallFlowLayout {
+    
     override func prepare() {
         super.prepare()
         
-        //获取cell个数
+        // 0.获取item的个数
         let itemCount = collectionView!.numberOfItems(inSection: 0)
         
-        //创建每个cell的UICollectionViewLayoutAttributes
-        let cellW : CGFloat = (collectionView!.bounds.width - sectionInset.left - sectionInset.right - CGFloat(cols - 1) * minimumInteritemSpacing) / CGFloat(cols)
+        // 1.获取列数
+        let cols = dataSource?.numberOfColsInWaterfallLayout?(self) ?? 2
         
-        for i in 0..<itemCount {
-            //创建indexPath
+        // 2.计算Item的宽度
+        let itemW = (collectionView!.bounds.width - self.sectionInset.left - self.sectionInset.right - self.minimumInteritemSpacing) / CGFloat(cols)
+        
+        // 3.计算所有的item的属性
+        for i in startIndex..<itemCount {
+            // 1.设置每一个Item位置相关的属性
             let indexPath = IndexPath(item: i, section: 0)
             
-            //创建UICollectionViewLayoutAttributes
-            let attr = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+            // 2.根据位置创建Attributes属性
+            let attrs = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             
-            //设置frame
-            guard let cellH : CGFloat = dataSource?.waterfall(self, item: i) else {
-                fatalError("waterfall(_ waterfall : SANWaterfallFlowLayout, item : Int) -> CGFloat")
+            // 3.随机一个高度
+            guard let height = dataSource?.waterfallLayout(self, indexPath: indexPath) else {
+                fatalError("请设置数据源,并且实现对应的数据源方法")
             }
-            let minH = totalHeights.min()!
-            let minIndex = totalHeights.index(of: minH)!
-            let cellX : CGFloat = sectionInset.left + (minimumInteritemSpacing + cellW) * CGFloat(minIndex)
-            let cellY : CGFloat = minH + minimumLineSpacing
-            attr.frame = CGRect(x: cellX, y: cellY, width: cellW, height: cellH)
             
-            //保存attr
-            cellAttrs.append(attr)
+            // 4.取出最小列的位置
+            var minH = colHeights.min()!
+            let index = colHeights.index(of: minH)!
+            minH = minH + height + minimumLineSpacing
+            colHeights[index] = minH
             
-            //替换当前列高度
-            totalHeights[minIndex] = minH + minimumLineSpacing + cellH
+            // 5.设置item的属性
+            attrs.frame = CGRect(x: self.sectionInset.left + (self.minimumInteritemSpacing + itemW) * CGFloat(index), y: minH - height - self.minimumLineSpacing, width: itemW, height: height)
+            attrsArray.append(attrs)
         }
+        
+        // 4.记录最大值
+        maxH = colHeights.max()!
+        
+        // 5.给startIndex重新复制
+        startIndex = itemCount
     }
 }
 
-//MARK: - 返回所有布局
 extension SANWaterfallFlowLayout {
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        return cellAttrs
+        return attrsArray
     }
-}
-
-//MARK: - 设置contentSize
-extension SANWaterfallFlowLayout {
+    
     override var collectionViewContentSize: CGSize {
-        return CGSize(width: 0, height: totalHeights.max()! + sectionInset.bottom)
+        return CGSize(width: 0, height: maxH + sectionInset.bottom - minimumLineSpacing)
     }
 }
-

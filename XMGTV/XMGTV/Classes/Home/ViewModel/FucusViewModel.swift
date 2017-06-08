@@ -12,14 +12,14 @@ class FucusViewModel: HomeViewModel {
 
 }
 
-extension FucusViewModel {
-    func loadFucusData(completion : () -> ()) {
-        let dataArray = SqliteTools.querySQL("SELECT * FROM t_focus;")
-        
-        for dict in dataArray {
-            self.anchorModels.append(AnchorModel(dict: dict))
-        }
-        
-        completion()
-    }
-}
+//extension FucusViewModel {
+//    func loadFucusData(completion : () -> ()) {
+//        let dataArray = SqliteTools.querySQL("SELECT * FROM t_focus;")
+//        
+//        for dict in dataArray {
+//            self.anchorModels.append(AnchorModel(dict: dict))
+//        }
+//        
+//        completion()
+//    }
+//}
