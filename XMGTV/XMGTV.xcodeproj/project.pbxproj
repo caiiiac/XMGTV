@@ -29,6 +29,10 @@
 		2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EF1EE04BC90063E5CF /* SANContentView.swift */; };
 		2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */; };
 		26C951B81EE6FBF5008DA4B3 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26C951B71EE6FBF5008DA4B3 /* types.plist */; };
+		26D489701EE984E9009F36C6 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4896F1EE984E9009F36C6 /* NSDate-Extension.swift */; };
+		26D489731EE9853C009F36C6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D489721EE9853C009F36C6 /* Const.swift */; };
+		26D4897A1EE98629009F36C6 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D489781EE98629009F36C6 /* RoomViewController.swift */; };
+		26D4897B1EE98629009F36C6 /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D489791EE98629009F36C6 /* RoomViewController.xib */; };
 		26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */; };
 		26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FA1EDEEEDA00CD1B2A /* Main.storyboard */; };
 		26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FD1EDEEEDA00CD1B2A /* Assets.xcassets */; };
@@ -87,6 +91,10 @@
 		2698C3EF1EE04BC90063E5CF /* SANContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANContentView.swift; sourceTree = "<group>"; };
 		2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleStyle.swift; sourceTree = "<group>"; };
 		26C951B71EE6FBF5008DA4B3 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
+		26D4896F1EE984E9009F36C6 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		26D489721EE9853C009F36C6 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		26D489781EE98629009F36C6 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		26D489791EE98629009F36C6 /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
 		26FE83F31EDEEEDA00CD1B2A /* XMGTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMGTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FE83FB1EDEEEDA00CD1B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -225,6 +233,47 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		26D489711EE98526009F36C6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				26D489721EE9853C009F36C6 /* Const.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		26D489741EE985FC009F36C6 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				26D489751EE985FC009F36C6 /* Controller */,
+				26D489761EE985FC009F36C6 /* Model */,
+				26D489771EE985FC009F36C6 /* View */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		26D489751EE985FC009F36C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26D489781EE98629009F36C6 /* RoomViewController.swift */,
+				26D489791EE98629009F36C6 /* RoomViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		26D489761EE985FC009F36C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26D489771EE985FC009F36C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		26FE83EA1EDEEEDA00CD1B2A = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +333,7 @@
 			children = (
 				26FE84251EDEEFB700CD1B2A /* Base */,
 				26FE84281EDEEFB700CD1B2A /* Main */,
+				26D489741EE985FC009F36C6 /* Live */,
 				26FE84271EDEEFB700CD1B2A /* Home */,
 				26FE842A1EDEEFB700CD1B2A /* Rank */,
 				26FE84261EDEEFB700CD1B2A /* Discover */,
@@ -325,6 +375,7 @@
 		26FE84281EDEEFB700CD1B2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				26D489711EE98526009F36C6 /* Common */,
 				269663861EE59C8C001C0085 /* SANWaterfall */,
 				2698C3EA1EE04B7F0063E5CF /* SANPageView */,
 				26FE843D1EDEFAC900CD1B2A /* Extension */,
@@ -372,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				26FE843E1EDEFAE900CD1B2A /* UIColor-Extension.swift */,
+				26D4896F1EE984E9009F36C6 /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -503,6 +555,7 @@
 				2664DC331EE85372002F0B20 /* FocusViewCell.xib in Resources */,
 				26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */,
 				26FE84311EDEF14300CD1B2A /* Discover.storyboard in Resources */,
+				26D4897B1EE98629009F36C6 /* RoomViewController.xib in Resources */,
 				26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */,
 				26FE842F1EDEF12E00CD1B2A /* Home.storyboard in Resources */,
 			);
@@ -587,14 +640,17 @@
 				2664DC271EE85284002F0B20 /* FucusViewModel.swift in Sources */,
 				2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */,
 				26FE843C1EDEF79F00CD1B2A /* SANNavigationController.swift in Sources */,
+				26D489701EE984E9009F36C6 /* NSDate-Extension.swift in Sources */,
 				2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */,
 				2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */,
 				2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */,
 				2664DC191EE84F88002F0B20 /* AnchorModel.swift in Sources */,
+				26D4897A1EE98629009F36C6 /* RoomViewController.swift in Sources */,
 				2664DC1C1EE84FF0002F0B20 /* SqliteTools.swift in Sources */,
 				2664DC321EE85372002F0B20 /* FocusViewCell.swift in Sources */,
 				2664DC291EE852BD002F0B20 /* AnchorViewController.swift in Sources */,
 				2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */,
+				26D489731EE9853C009F36C6 /* Const.swift in Sources */,
 				2664DC351EE85465002F0B20 /* KingfisherExtension.swift in Sources */,
 				269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */,
 				26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */,

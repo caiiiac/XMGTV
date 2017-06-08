@@ -19,7 +19,7 @@ class AnchorViewController: UIViewController {
     // MARK: 定义属性
     fileprivate lazy var homeVM : HomeViewModel = HomeViewModel()
     fileprivate lazy var collectionView : UICollectionView = {
-        let layout = WaterfallLayout()
+        let layout = SANWaterfallFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: kEdgeMargin, left: kEdgeMargin, bottom: kEdgeMargin, right: kEdgeMargin)
         layout.minimumLineSpacing = kEdgeMargin
         layout.minimumInteritemSpacing = kEdgeMargin
@@ -62,7 +62,7 @@ extension AnchorViewController {
 }
 
 // MARK:- collectionView的数据源&代理
-extension AnchorViewController : UICollectionViewDataSource, SANWaterfallFlowLayoutDataSource, UICollectionViewDelegate {
+extension AnchorViewController : UICollectionViewDataSource, SANWaterfallLayoutDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return homeVM.anchorModels.count
     }
@@ -80,14 +80,13 @@ extension AnchorViewController : UICollectionViewDataSource, SANWaterfallFlowLay
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let liveVc = RoomViewController()
-        liveVc.anchor = homeVM.anchorModels[indexPath.item]
-        navigationController?.pushViewController(liveVc, animated: true)
+        let roomVc = RoomViewController()
+        navigationController?.pushViewController(roomVc, animated: true)
     }
     
-    
-    func waterfallLayout(_ layout: WaterfallLayout, indexPath: IndexPath) -> CGFloat {
+    func waterfallLayout(_ layout: SANWaterfallFlowLayout, indexPath: IndexPath) -> CGFloat {
         return indexPath.item % 2 == 0 ? kScreenW * 2 / 3 : kScreenW * 0.5
     }
 }
+
 
