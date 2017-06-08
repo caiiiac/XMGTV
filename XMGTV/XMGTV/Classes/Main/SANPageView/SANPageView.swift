@@ -10,21 +10,25 @@ import UIKit
 
 class SANPageView: UIView {
 
-    fileprivate var titles : [String]
-    fileprivate var childVcs : [UIViewController]
-    fileprivate var parentVc : UIViewController
-    fileprivate var style : SANTitleStyle
+    // MARK: 定义属性
+    fileprivate var titles : [String]!
+    fileprivate var style : SANTitleStyle!
+    fileprivate var childVcs : [UIViewController]!
+    fileprivate weak var parentVc : UIViewController!
     
     fileprivate var titleView : SANTitleView!
+    fileprivate var contentView : SANContentView!
     
-    init(frame: CGRect, titles : [String], childVcs : [UIViewController], parentVc : UIViewController, style : SANTitleStyle) {
+    // MARK: 自定义构造函数
+    init(frame: CGRect, titles : [String], style : SANTitleStyle, childVcs : [UIViewController], parentVc : UIViewController) {
+        super.init(frame: frame)
         
+        assert(titles.count == childVcs.count, "标题&控制器个数不同,请检测!!!")
+        self.style = style
         self.titles = titles
         self.childVcs = childVcs
         self.parentVc = parentVc
-        self.style = style
-        
-        super.init(frame: frame)
+        parentVc.automaticallyAdjustsScrollViewInsets = false
         
         setupUI()
     }
@@ -32,28 +36,42 @@ class SANPageView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
+
+// MARK:- 设置界面内容
 extension SANPageView {
     fileprivate func setupUI() {
-        setupTitleView()
-        setupContentView()
-    }
-    
-    private func setupTitleView() {
-        let titleFrame = CGRect(x: 0, y: 0, width: bounds.width, height: style.titleHeight)
+        let titleH : CGFloat = 44
+        let titleFrame = CGRect(x: 0, y: 0, width: frame.width, height: titleH)
         titleView = SANTitleView(frame: titleFrame, titles: titles, style : style)
+        titleView.delegate = self
         addSubview(titleView)
+        
+        let contentFrame = CGRect(x: 0, y: titleH, width: frame.width, height: frame.height - titleH)
+        contentView = SANContentView(frame: contentFrame, childVcs: childVcs, parentViewController: parentVc)
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.delegate = self
+        addSubview(contentView)
+    }
+}
+
+
+// MARK:- 设置HYContentView的代理
+extension SANPageView : SANContentViewDelegate {
+    func contentView(_ contentView: SANContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        titleView.setTitleWithProgress(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
     
-    private func setupContentView() {
-        let contentFrame = CGRect(x: 0, y: style.titleHeight, width: bounds.width, height: bounds.height - style.titleHeight)
-        let contentView = SANContentView(frame: contentFrame, childVcs: childVcs, parentVc: parentVc)
-        addSubview(contentView)
-        
-        //添加代理 
-        titleView.delegate = contentView
-        contentView.delegate = titleView
+    func contentViewEndScroll(_ contentView: SANContentView) {
+        titleView.contentViewDidEndScroll()
+    }
+}
+
+
+// MARK:- 设置HYTitleView的代理
+extension SANPageView : SANTitleViewDelegate {
+    func titleView(_ titleView: SANTitleView, selectedIndex index: Int) {
+        contentView.setCurrentIndex(index)
     }
 }

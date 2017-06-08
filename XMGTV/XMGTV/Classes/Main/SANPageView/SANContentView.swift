@@ -8,23 +8,26 @@
 
 import UIKit
 
+@objc protocol SANContentViewDelegate : class {
+    func contentView(_ contentView : SANContentView, progress : CGFloat, sourceIndex : Int, targetIndex : Int)
+    
+    @objc optional func contentViewEndScroll(_ contentView : SANContentView)
+}
+
 private let kContentCellID = "kContentCellID"
 
-protocol SANContentViewDelegate : class {
-    func contentView(_ contentView : SANContentView, targetIndex : Int)
-    func contentView(_ contentView : SANContentView, targetIndex : Int, progress :CGFloat)
-}
 class SANContentView: UIView {
-
+    
+    // MARK: 对外属性
     weak var delegate : SANContentViewDelegate?
     
-    fileprivate var childVcs : [UIViewController]
-    fileprivate var parentVc : UIViewController
-    
+    // MARK: 定义属性
+    fileprivate var childVcs : [UIViewController]!
+    fileprivate weak var parentVc : UIViewController!
+    fileprivate var isForbidScrollDelegate : Bool = false
     fileprivate var startOffsetX : CGFloat = 0
-    //是否禁滚动
-    fileprivate var isForbidScroll : Bool = false
     
+    // MARK: 控件属性
     fileprivate lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = self.bounds.size
@@ -33,24 +36,25 @@ class SANContentView: UIView {
         layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kContentCellID)
-        collectionView.isPagingEnabled = true
-        collectionView.bounces = false
         collectionView.scrollsToTop = false
-         collectionView.showsHorizontalScrollIndicator = false
-        
+        collectionView.bounces = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.frame = self.bounds
+        collectionView.isPagingEnabled = true
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kContentCellID)
+        collectionView.backgroundColor = UIColor.clear
         
         return collectionView
     }()
     
-    init(frame: CGRect, childVcs : [UIViewController], parentVc : UIViewController) {
-        self.childVcs = childVcs
-        self.parentVc = parentVc
-        
+    // MARK: 构造函数
+    init(frame: CGRect, childVcs : [UIViewController], parentViewController : UIViewController) {
         super.init(frame: frame)
         
+        self.childVcs = childVcs
+        self.parentVc = parentViewController
         
         setupUI()
     }
@@ -58,34 +62,36 @@ class SANContentView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
-//MARK: - UI
+
+// MARK:- 设置界面内容
 extension SANContentView {
     fileprivate func setupUI() {
-        
-        //将子控制器添加到父控制器中
-        for childVc in childVcs {
-            parentVc.addChildViewController(childVc)
+        // 1.将所有的控制器添加到父控制器中
+        for vc in childVcs {
+            parentVc.addChildViewController(vc)
         }
-       
+        
+        // 2.添加UICollectionView
         addSubview(collectionView)
     }
 }
 
-//MARK: - UICollectionViewDataSource
+
+// MARK:- 设置UICollectionView的数据源
 extension SANContentView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childVcs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // 1.获取Cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kContentCellID, for: indexPath)
         
-        //先将cell子控件清空,防止多次add
-        for subView in cell.contentView.subviews {
-            subView.removeFromSuperview()
+        // 2.设置cell的内容
+        for subview in cell.contentView.subviews {
+            subview.removeFromSuperview()
         }
         
         let childVc = childVcs[indexPath.item]
@@ -93,80 +99,89 @@ extension SANContentView : UICollectionViewDataSource {
         cell.contentView.addSubview(childVc.view)
         
         return cell
-        
     }
 }
 
-//MARK: - UICollectionViewDelegate
+
+// MARK:- 设置UICollectionView的代理
 extension SANContentView : UICollectionViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        isForbidScrollDelegate = false
+        
+        startOffsetX = scrollView.contentOffset.x
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 0.判断是否是点击事件
+        if isForbidScrollDelegate { return }
+        
+        // 1.定义获取需要的数据
+        var progress : CGFloat = 0
+        var sourceIndex : Int = 0
+        var targetIndex : Int = 0
+        
+        // 2.判断是左滑还是右滑
+        let currentOffsetX = scrollView.contentOffset.x
+        let scrollViewW = scrollView.bounds.width
+        if currentOffsetX > startOffsetX { // 左滑
+            // 1.计算progress
+            progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW)
+            
+            // 2.计算sourceIndex
+            sourceIndex = Int(currentOffsetX / scrollViewW)
+            
+            // 3.计算targetIndex
+            targetIndex = sourceIndex + 1
+            if targetIndex >= childVcs.count {
+                targetIndex = childVcs.count - 1
+            }
+            
+            // 4.如果完全划过去
+            if currentOffsetX - startOffsetX == scrollViewW {
+                progress = 1
+                targetIndex = sourceIndex
+            }
+        } else { // 右滑
+            // 1.计算progress
+            progress = 1 - (currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW))
+            
+            // 2.计算targetIndex
+            targetIndex = Int(currentOffsetX / scrollViewW)
+            
+            // 3.计算sourceIndex
+            sourceIndex = targetIndex + 1
+            if sourceIndex >= childVcs.count {
+                sourceIndex = childVcs.count - 1
+            }
+        }
+        
+        // 3.将progress/sourceIndex/targetIndex传递给titleView
+        delegate?.contentView(self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+    
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        contentEndScroll()
+        delegate?.contentViewEndScroll?(self)
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
-            contentEndScroll()
+            delegate?.contentViewEndScroll?(self)
         }
-    }
-    
-    private func contentEndScroll() {
-        
-        guard !isForbidScroll else {
-            return
-        }
-        //计算当前位置
-        let currentIndex = Int(collectionView.contentOffset.x / collectionView.bounds.width)
-        
-        //通知title调整
-        delegate?.contentView(self, targetIndex: currentIndex)
-        
-    }
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-         isForbidScroll = false
-        startOffsetX = scrollView.contentOffset.x
-    }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //判断偏移量是否和开始时一样
-        guard startOffsetX != scrollView.contentOffset.x, !isForbidScroll else {
-            return
-        }
-        
-        //定义targetIndex/progress
-        var targetIndex = 0
-        var progress : CGFloat = 0.0
-        
-        //赋值
-        let currentIndex = Int(startOffsetX / scrollView.bounds.width)
-        if startOffsetX < scrollView.contentOffset.x {  //左滑
-            targetIndex = currentIndex + 1
-            if targetIndex > childVcs.count - 1 {
-                targetIndex = childVcs.count - 1
-            }
-            
-            progress = (scrollView.contentOffset.x - startOffsetX) / scrollView.bounds.width
-        } else {    //右滑动
-            targetIndex = currentIndex - 1
-            if targetIndex < 0 {
-                targetIndex = 0
-            }
-            
-            progress = (startOffsetX - scrollView.contentOffset.x) / scrollView.bounds.width 
-        }
-        //通知代理
-        delegate?.contentView(self, targetIndex: targetIndex, progress: progress)
     }
 }
 
-
-//MARK: - SANTitleViewDelegate
-extension SANContentView : SANTitleViewDelegate {
-    func titleView(_ titleView: SANTitleView, targetIndex: Int) {
+// MARK:- 对外暴露的方法
+extension SANContentView {
+    func setCurrentIndex(_ currentIndex : Int) {
         
-        isForbidScroll = true
+        // 1.记录需要进制执行代理方法
+        isForbidScrollDelegate = true
         
-        let indexPath = IndexPath(item: targetIndex, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
-        
+        // 2.滚动正确的位置
+        let offsetX = CGFloat(currentIndex) * collectionView.frame.width
+        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
     }
 }
 
