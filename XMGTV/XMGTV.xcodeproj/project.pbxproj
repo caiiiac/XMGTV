@@ -29,6 +29,7 @@
 		2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EF1EE04BC90063E5CF /* SANContentView.swift */; };
 		2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */; };
 		26C951B81EE6FBF5008DA4B3 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26C951B71EE6FBF5008DA4B3 /* types.plist */; };
+		26CA16C61EEEE8DA00369635 /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA16C51EEEE8DA00369635 /* Emitterable.swift */; };
 		26D489701EE984E9009F36C6 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4896F1EE984E9009F36C6 /* NSDate-Extension.swift */; };
 		26D489731EE9853C009F36C6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D489721EE9853C009F36C6 /* Const.swift */; };
 		26D4897A1EE98629009F36C6 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D489781EE98629009F36C6 /* RoomViewController.swift */; };
@@ -91,6 +92,7 @@
 		2698C3EF1EE04BC90063E5CF /* SANContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANContentView.swift; sourceTree = "<group>"; };
 		2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleStyle.swift; sourceTree = "<group>"; };
 		26C951B71EE6FBF5008DA4B3 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
+		26CA16C51EEEE8DA00369635 /* Emitterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
 		26D4896F1EE984E9009F36C6 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		26D489721EE9853C009F36C6 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		26D489781EE98629009F36C6 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,14 @@
 				26C951B71EE6FBF5008DA4B3 /* types.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		26CA16C41EEEE8C600369635 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				26CA16C51EEEE8DA00369635 /* Emitterable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		26D489711EE98526009F36C6 /* Common */ = {
@@ -375,6 +385,7 @@
 		26FE84281EDEEFB700CD1B2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				26CA16C41EEEE8C600369635 /* Protocol */,
 				26D489711EE98526009F36C6 /* Common */,
 				269663861EE59C8C001C0085 /* SANWaterfall */,
 				2698C3EA1EE04B7F0063E5CF /* SANPageView */,
@@ -635,6 +646,7 @@
 				2664DC2E1EE8534D002F0B20 /* HomeViewCell.swift in Sources */,
 				2664DC251EE850D6002F0B20 /* NetworkTools.swift in Sources */,
 				2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */,
+				26CA16C61EEEE8DA00369635 /* Emitterable.swift in Sources */,
 				26FE843F1EDEFAE900CD1B2A /* UIColor-Extension.swift in Sources */,
 				2664DC231EE85090002F0B20 /* HomeViewModel.swift in Sources */,
 				2664DC271EE85284002F0B20 /* FucusViewModel.swift in Sources */,
