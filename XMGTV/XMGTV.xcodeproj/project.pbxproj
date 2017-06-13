@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26437FC41EF020D1006884DA /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC31EF020D1006884DA /* NibLoadable.swift */; };
 		2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC141EE84EE0002F0B20 /* BaseModel.swift */; };
 		2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC161EE84F4F002F0B20 /* HomeType.swift */; };
 		2664DC191EE84F88002F0B20 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC181EE84F88002F0B20 /* AnchorModel.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26437FC31EF020D1006884DA /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		2664DC141EE84EE0002F0B20 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		2664DC161EE84F4F002F0B20 /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
 		2664DC181EE84F88002F0B20 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				26CA16C51EEEE8DA00369635 /* Emitterable.swift */,
+				26437FC31EF020D1006884DA /* NibLoadable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				26FE843F1EDEFAE900CD1B2A /* UIColor-Extension.swift in Sources */,
 				2664DC231EE85090002F0B20 /* HomeViewModel.swift in Sources */,
 				2664DC271EE85284002F0B20 /* FucusViewModel.swift in Sources */,
+				26437FC41EF020D1006884DA /* NibLoadable.swift in Sources */,
 				2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */,
 				26FE843C1EDEF79F00CD1B2A /* SANNavigationController.swift in Sources */,
 				26D489701EE984E9009F36C6 /* NSDate-Extension.swift in Sources */,
