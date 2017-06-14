@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		26437FC41EF020D1006884DA /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC31EF020D1006884DA /* NibLoadable.swift */; };
+		26437FC61EF183E9006884DA /* SANPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC51EF183E9006884DA /* SANPageCollectionView.swift */; };
+		26437FC81EF18474006884DA /* SANPageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC71EF18474006884DA /* SANPageCollectionViewLayout.swift */; };
 		2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC141EE84EE0002F0B20 /* BaseModel.swift */; };
 		2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC161EE84F4F002F0B20 /* HomeType.swift */; };
 		2664DC191EE84F88002F0B20 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC181EE84F88002F0B20 /* AnchorModel.swift */; };
@@ -72,6 +74,8 @@
 
 /* Begin PBXFileReference section */
 		26437FC31EF020D1006884DA /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		26437FC51EF183E9006884DA /* SANPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageCollectionView.swift; sourceTree = "<group>"; };
+		26437FC71EF18474006884DA /* SANPageCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageCollectionViewLayout.swift; sourceTree = "<group>"; };
 		2664DC141EE84EE0002F0B20 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		2664DC161EE84F4F002F0B20 /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
 		2664DC181EE84F88002F0B20 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 				2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */,
 				2698C3EF1EE04BC90063E5CF /* SANContentView.swift */,
 				2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */,
+				26437FC51EF183E9006884DA /* SANPageCollectionView.swift */,
+				26437FC71EF18474006884DA /* SANPageCollectionViewLayout.swift */,
 			);
 			path = SANPageView;
 			sourceTree = "<group>";
@@ -659,12 +665,14 @@
 				26D489701EE984E9009F36C6 /* NSDate-Extension.swift in Sources */,
 				2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */,
 				2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */,
+				26437FC61EF183E9006884DA /* SANPageCollectionView.swift in Sources */,
 				2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */,
 				2664DC191EE84F88002F0B20 /* AnchorModel.swift in Sources */,
 				26D4897A1EE98629009F36C6 /* RoomViewController.swift in Sources */,
 				2664DC1C1EE84FF0002F0B20 /* SqliteTools.swift in Sources */,
 				2664DC321EE85372002F0B20 /* FocusViewCell.swift in Sources */,
 				2664DC291EE852BD002F0B20 /* AnchorViewController.swift in Sources */,
+				26437FC81EF18474006884DA /* SANPageCollectionViewLayout.swift in Sources */,
 				2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */,
 				26D489731EE9853C009F36C6 /* Const.swift in Sources */,
 				2664DC351EE85465002F0B20 /* KingfisherExtension.swift in Sources */,
