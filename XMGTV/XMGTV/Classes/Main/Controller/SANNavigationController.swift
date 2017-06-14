@@ -27,7 +27,7 @@ class SANNavigationController: UINavigationController {
         }
         
         let targetObjc = targets[0]
-        print(targetObjc)
+//        print(targetObjc)
         
         let target = targetObjc.value(forKey: "target")
         let action = Selector(("handleNavigationTransition:"))
