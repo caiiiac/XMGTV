@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TVH-N9-Thz" customClass="EmoticonViewCell" customModule="XMGTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ad-Iy-gM4">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1ad-Iy-gM4" secondAttribute="bottom" id="BPp-Wc-eGd"/>
+                <constraint firstItem="1ad-Iy-gM4" firstAttribute="leading" secondItem="TVH-N9-Thz" secondAttribute="leading" id="NHf-Sg-d3m"/>
+                <constraint firstItem="1ad-Iy-gM4" firstAttribute="top" secondItem="TVH-N9-Thz" secondAttribute="top" id="Z50-EH-Wwn"/>
+                <constraint firstAttribute="trailing" secondItem="1ad-Iy-gM4" secondAttribute="trailing" id="dLb-l1-y9K"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="1ad-Iy-gM4" id="uhW-Ia-fYc"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
