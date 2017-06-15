@@ -26,6 +26,16 @@
 		2664DC321EE85372002F0B20 /* FocusViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC301EE85372002F0B20 /* FocusViewCell.swift */; };
 		2664DC331EE85372002F0B20 /* FocusViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2664DC311EE85372002F0B20 /* FocusViewCell.xib */; };
 		2664DC351EE85465002F0B20 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC341EE85465002F0B20 /* KingfisherExtension.swift */; };
+		267570F41EF287D6009701A3 /* ChatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267570F31EF287D6009701A3 /* ChatToolsView.swift */; };
+		267570F61EF28837009701A3 /* ChatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267570F51EF28837009701A3 /* ChatToolsView.xib */; };
+		267570F81EF2891D009701A3 /* EmoticonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267570F71EF2891D009701A3 /* EmoticonView.swift */; };
+		267570FA1EF2894D009701A3 /* Emoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267570F91EF2894D009701A3 /* Emoticon.swift */; };
+		267570FC1EF28966009701A3 /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267570FB1EF28966009701A3 /* EmoticonPackage.swift */; };
+		267570FF1EF289EF009701A3 /* EmoticonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267570FE1EF289EF009701A3 /* EmoticonViewModel.swift */; };
+		267571021EF28A37009701A3 /* EmoticonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267571001EF28A37009701A3 /* EmoticonViewCell.swift */; };
+		267571031EF28A37009701A3 /* EmoticonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267571011EF28A37009701A3 /* EmoticonViewCell.xib */; };
+		267571061EF28A9C009701A3 /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 267571041EF28A9C009701A3 /* QHNormalEmotionSort.plist */; };
+		267571071EF28A9C009701A3 /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 267571051EF28A9C009701A3 /* QHSohuGifSort.plist */; };
 		269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269663871EE59FCA001C0085 /* SANWaterfallFlowLayout.swift */; };
 		2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EB1EE04B970063E5CF /* SANPageView.swift */; };
 		2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */; };
@@ -92,6 +102,16 @@
 		2664DC301EE85372002F0B20 /* FocusViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewCell.swift; sourceTree = "<group>"; };
 		2664DC311EE85372002F0B20 /* FocusViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusViewCell.xib; sourceTree = "<group>"; };
 		2664DC341EE85465002F0B20 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
+		267570F31EF287D6009701A3 /* ChatToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatToolsView.swift; sourceTree = "<group>"; };
+		267570F51EF28837009701A3 /* ChatToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatToolsView.xib; sourceTree = "<group>"; };
+		267570F71EF2891D009701A3 /* EmoticonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonView.swift; sourceTree = "<group>"; };
+		267570F91EF2894D009701A3 /* Emoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoticon.swift; sourceTree = "<group>"; };
+		267570FB1EF28966009701A3 /* EmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonPackage.swift; sourceTree = "<group>"; };
+		267570FE1EF289EF009701A3 /* EmoticonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonViewModel.swift; sourceTree = "<group>"; };
+		267571001EF28A37009701A3 /* EmoticonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonViewCell.swift; sourceTree = "<group>"; };
+		267571011EF28A37009701A3 /* EmoticonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonViewCell.xib; sourceTree = "<group>"; };
+		267571041EF28A9C009701A3 /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
+		267571051EF28A9C009701A3 /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
 		269663871EE59FCA001C0085 /* SANWaterfallFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANWaterfallFlowLayout.swift; sourceTree = "<group>"; };
 		2698C3EB1EE04B970063E5CF /* SANPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageView.swift; sourceTree = "<group>"; };
 		2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleView.swift; sourceTree = "<group>"; };
@@ -214,6 +234,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		267570F21EF287BE009701A3 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				267570F31EF287D6009701A3 /* ChatToolsView.swift */,
+				267570F51EF28837009701A3 /* ChatToolsView.xib */,
+				267570F71EF2891D009701A3 /* EmoticonView.swift */,
+				267571001EF28A37009701A3 /* EmoticonViewCell.swift */,
+				267571011EF28A37009701A3 /* EmoticonViewCell.xib */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		267570FD1EF289E4009701A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				267570FE1EF289EF009701A3 /* EmoticonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		269663861EE59C8C001C0085 /* SANWaterfall */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				26C951B71EE6FBF5008DA4B3 /* types.plist */,
+				267571041EF28A9C009701A3 /* QHNormalEmotionSort.plist */,
+				267571051EF28A9C009701A3 /* QHSohuGifSort.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -263,6 +305,7 @@
 		26D489741EE985FC009F36C6 /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				267570FD1EF289E4009701A3 /* ViewModel */,
 				26D489751EE985FC009F36C6 /* Controller */,
 				26D489761EE985FC009F36C6 /* Model */,
 				26D489771EE985FC009F36C6 /* View */,
@@ -282,6 +325,8 @@
 		26D489761EE985FC009F36C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				267570F91EF2894D009701A3 /* Emoticon.swift */,
+				267570FB1EF28966009701A3 /* EmoticonPackage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,6 +334,7 @@
 		26D489771EE985FC009F36C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				267570F21EF287BE009701A3 /* ChatView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -572,11 +618,15 @@
 				26C951B81EE6FBF5008DA4B3 /* types.plist in Resources */,
 				2664DC2F1EE8534D002F0B20 /* HomeViewCell.xib in Resources */,
 				26FE84011EDEEEDA00CD1B2A /* LaunchScreen.storyboard in Resources */,
+				267571031EF28A37009701A3 /* EmoticonViewCell.xib in Resources */,
 				2664DC331EE85372002F0B20 /* FocusViewCell.xib in Resources */,
 				26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */,
 				26FE84311EDEF14300CD1B2A /* Discover.storyboard in Resources */,
+				267571071EF28A9C009701A3 /* QHSohuGifSort.plist in Resources */,
 				26D4897B1EE98629009F36C6 /* RoomViewController.xib in Resources */,
 				26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */,
+				267570F61EF28837009701A3 /* ChatToolsView.xib in Resources */,
+				267571061EF28A9C009701A3 /* QHNormalEmotionSort.plist in Resources */,
 				26FE842F1EDEF12E00CD1B2A /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,6 +706,7 @@
 				2664DC251EE850D6002F0B20 /* NetworkTools.swift in Sources */,
 				2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */,
 				26CA16C61EEEE8DA00369635 /* Emitterable.swift in Sources */,
+				267570F81EF2891D009701A3 /* EmoticonView.swift in Sources */,
 				26FE843F1EDEFAE900CD1B2A /* UIColor-Extension.swift in Sources */,
 				2664DC231EE85090002F0B20 /* HomeViewModel.swift in Sources */,
 				2664DC271EE85284002F0B20 /* FucusViewModel.swift in Sources */,
@@ -663,7 +714,9 @@
 				2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */,
 				26FE843C1EDEF79F00CD1B2A /* SANNavigationController.swift in Sources */,
 				26D489701EE984E9009F36C6 /* NSDate-Extension.swift in Sources */,
+				267571021EF28A37009701A3 /* EmoticonViewCell.swift in Sources */,
 				2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */,
+				267570F41EF287D6009701A3 /* ChatToolsView.swift in Sources */,
 				2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */,
 				26437FC61EF183E9006884DA /* SANPageCollectionView.swift in Sources */,
 				2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */,
@@ -676,9 +729,12 @@
 				2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */,
 				26D489731EE9853C009F36C6 /* Const.swift in Sources */,
 				2664DC351EE85465002F0B20 /* KingfisherExtension.swift in Sources */,
+				267570FA1EF2894D009701A3 /* Emoticon.swift in Sources */,
 				269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */,
+				267570FF1EF289EF009701A3 /* EmoticonViewModel.swift in Sources */,
 				26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */,
 				26FE843A1EDEF73C00CD1B2A /* RankViewController.swift in Sources */,
+				267570FC1EF28966009701A3 /* EmoticonPackage.swift in Sources */,
 				26FE84381EDEF6DB00CD1B2A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
