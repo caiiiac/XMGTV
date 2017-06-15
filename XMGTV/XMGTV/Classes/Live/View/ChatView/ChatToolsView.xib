@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ddT-nv-soX" customClass="ChatToolsView" customModule="XMGTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="愉快地和主播聊一聊吧" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uWm-be-Mmy">
+                    <rect key="frame" x="5" y="5" width="300" height="34"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldDidEdit:" destination="ddT-nv-soX" eventType="editingChanged" id="B3Z-id-rLi"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kui-5E-azW">
+                    <rect key="frame" x="310" y="5" width="60" height="34"/>
+                    <color key="backgroundColor" red="0.81176470590000005" green="0.58431372550000005" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="gT9-Ui-uwj"/>
+                    </constraints>
+                    <state key="normal" title="发送">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="sendBtnClick:" destination="ddT-nv-soX" eventType="touchUpInside" id="rsw-3w-W6k"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="uWm-be-Mmy" firstAttribute="leading" secondItem="ddT-nv-soX" secondAttribute="leading" constant="5" id="0NZ-J6-0mY"/>
+                <constraint firstItem="uWm-be-Mmy" firstAttribute="top" secondItem="ddT-nv-soX" secondAttribute="top" constant="5" id="1mS-ze-HhQ"/>
+                <constraint firstAttribute="bottom" secondItem="uWm-be-Mmy" secondAttribute="bottom" constant="5" id="AU4-Df-Jf8"/>
+                <constraint firstItem="Kui-5E-azW" firstAttribute="top" secondItem="ddT-nv-soX" secondAttribute="top" constant="5" id="du3-Cl-QLd"/>
+                <constraint firstItem="Kui-5E-azW" firstAttribute="leading" secondItem="uWm-be-Mmy" secondAttribute="trailing" constant="5" id="hbp-dR-LVw"/>
+                <constraint firstAttribute="bottom" secondItem="Kui-5E-azW" secondAttribute="bottom" constant="5" id="oFc-Pr-XZn"/>
+                <constraint firstAttribute="trailing" secondItem="Kui-5E-azW" secondAttribute="trailing" constant="5" id="uGX-1u-ctU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="inputTextField" destination="uWm-be-Mmy" id="Fsr-G2-y3h"/>
+                <outlet property="sendMsgBtn" destination="Kui-5E-azW" id="2kY-ee-I8K"/>
+            </connections>
+            <point key="canvasLocation" x="45.5" y="107"/>
+        </view>
+    </objects>
+</document>
