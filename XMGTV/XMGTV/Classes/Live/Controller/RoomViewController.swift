@@ -8,16 +8,22 @@
 
 import UIKit
 
+private let kChatToolsViewHeight : CGFloat = 44
+
 class RoomViewController: UIViewController, Emitterable{
     
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
+    
+    fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     
     // MARK: 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +42,7 @@ class RoomViewController: UIViewController, Emitterable{
 extension RoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
+        setupBottomView()
     }
     
     fileprivate func setupBlurView() {
@@ -44,6 +51,13 @@ extension RoomViewController {
         blurView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         blurView.frame = bgImageView.bounds
         bgImageView.addSubview(blurView)
+    }
+    
+    fileprivate func setupBottomView() {
+        chatToolsView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kChatToolsViewHeight)
+        chatToolsView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+        chatToolsView.delegate = self
+        view.addSubview(chatToolsView)
     }
 }
 
@@ -54,10 +68,14 @@ extension RoomViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        chatToolsView.inputTextField.resignFirstResponder()
+    }
+    
     @IBAction func bottomMenuClick(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            print("点击了聊天")
+            chatToolsView.inputTextField.becomeFirstResponder()
         case 1:
             print("点击了分享")
         case 2:
@@ -73,3 +91,28 @@ extension RoomViewController {
         }
     }
 }
+
+// MARK:- 监听键盘的弹出
+extension RoomViewController {
+    @objc fileprivate func keyboardWillChangeFrame(_ note : Notification) {
+        let duration = note.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+        let endFrame = (note.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let inputViewY = endFrame.origin.y - kChatToolsViewHeight
+        
+        UIView.animate(withDuration: duration, animations: {
+            UIView.setAnimationCurve(UIViewAnimationCurve(rawValue: 7)!)
+            let endY = inputViewY == (kScreenH - kChatToolsViewHeight) ? kScreenH : inputViewY
+            self.chatToolsView.frame.origin.y = endY
+        })
+    }
+}
+
+
+
+// MARK:- 监听用户输入的内容
+extension RoomViewController : ChatToolsViewDelegate {
+    func chatToolsView(toolView: ChatToolsView, message: String) {
+        print(message)
+    }
+}
+
