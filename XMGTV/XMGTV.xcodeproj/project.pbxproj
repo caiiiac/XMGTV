@@ -306,8 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				267570FD1EF289E4009701A3 /* ViewModel */,
-				26D489751EE985FC009F36C6 /* Controller */,
 				26D489761EE985FC009F36C6 /* Model */,
+				26D489751EE985FC009F36C6 /* Controller */,
 				26D489771EE985FC009F36C6 /* View */,
 			);
 			path = Live;
