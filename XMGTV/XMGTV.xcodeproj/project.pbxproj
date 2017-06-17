@@ -47,6 +47,13 @@
 		26D489731EE9853C009F36C6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D489721EE9853C009F36C6 /* Const.swift */; };
 		26D4897A1EE98629009F36C6 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D489781EE98629009F36C6 /* RoomViewController.swift */; };
 		26D4897B1EE98629009F36C6 /* RoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D489791EE98629009F36C6 /* RoomViewController.xib */; };
+		26ED18131EF4D3CC00C20ABC /* GiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED18121EF4D3CC00C20ABC /* GiftViewModel.swift */; };
+		26ED18151EF4D3EB00C20ABC /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED18141EF4D3EB00C20ABC /* GiftModel.swift */; };
+		26ED18171EF4D40200C20ABC /* GiftPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED18161EF4D40200C20ABC /* GiftPackage.swift */; };
+		26ED181B1EF4D45D00C20ABC /* GiftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED18191EF4D45D00C20ABC /* GiftViewCell.swift */; };
+		26ED181C1EF4D45D00C20ABC /* GiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26ED181A1EF4D45D00C20ABC /* GiftViewCell.xib */; };
+		26ED181E1EF4D4A400C20ABC /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED181D1EF4D4A400C20ABC /* GiftListView.swift */; };
+		26ED18201EF4D57100C20ABC /* GiftListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26ED181F1EF4D57100C20ABC /* GiftListView.xib */; };
 		26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */; };
 		26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FA1EDEEEDA00CD1B2A /* Main.storyboard */; };
 		26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FD1EDEEEDA00CD1B2A /* Assets.xcassets */; };
@@ -123,6 +130,13 @@
 		26D489721EE9853C009F36C6 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		26D489781EE98629009F36C6 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		26D489791EE98629009F36C6 /* RoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomViewController.xib; sourceTree = "<group>"; };
+		26ED18121EF4D3CC00C20ABC /* GiftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewModel.swift; sourceTree = "<group>"; };
+		26ED18141EF4D3EB00C20ABC /* GiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
+		26ED18161EF4D40200C20ABC /* GiftPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftPackage.swift; sourceTree = "<group>"; };
+		26ED18191EF4D45D00C20ABC /* GiftViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewCell.swift; sourceTree = "<group>"; };
+		26ED181A1EF4D45D00C20ABC /* GiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftViewCell.xib; sourceTree = "<group>"; };
+		26ED181D1EF4D4A400C20ABC /* GiftListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
+		26ED181F1EF4D57100C20ABC /* GiftListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftListView.xib; sourceTree = "<group>"; };
 		26FE83F31EDEEEDA00CD1B2A /* XMGTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMGTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FE83FB1EDEEEDA00CD1B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -250,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				267570FE1EF289EF009701A3 /* EmoticonViewModel.swift */,
+				26ED18121EF4D3CC00C20ABC /* GiftViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -327,6 +342,8 @@
 			children = (
 				267570F91EF2894D009701A3 /* Emoticon.swift */,
 				267570FB1EF28966009701A3 /* EmoticonPackage.swift */,
+				26ED18141EF4D3EB00C20ABC /* GiftModel.swift */,
+				26ED18161EF4D40200C20ABC /* GiftPackage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,9 +351,21 @@
 		26D489771EE985FC009F36C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				26ED18181EF4D44100C20ABC /* GiftView */,
 				267570F21EF287BE009701A3 /* ChatView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		26ED18181EF4D44100C20ABC /* GiftView */ = {
+			isa = PBXGroup;
+			children = (
+				26ED18191EF4D45D00C20ABC /* GiftViewCell.swift */,
+				26ED181A1EF4D45D00C20ABC /* GiftViewCell.xib */,
+				26ED181D1EF4D4A400C20ABC /* GiftListView.swift */,
+				26ED181F1EF4D57100C20ABC /* GiftListView.xib */,
+			);
+			path = GiftView;
 			sourceTree = "<group>";
 		};
 		26FE83EA1EDEEEDA00CD1B2A = {
@@ -617,8 +646,10 @@
 				26FE84351EDEF15900CD1B2A /* Rank.storyboard in Resources */,
 				26C951B81EE6FBF5008DA4B3 /* types.plist in Resources */,
 				2664DC2F1EE8534D002F0B20 /* HomeViewCell.xib in Resources */,
+				26ED18201EF4D57100C20ABC /* GiftListView.xib in Resources */,
 				26FE84011EDEEEDA00CD1B2A /* LaunchScreen.storyboard in Resources */,
 				267571031EF28A37009701A3 /* EmoticonViewCell.xib in Resources */,
+				26ED181C1EF4D45D00C20ABC /* GiftViewCell.xib in Resources */,
 				2664DC331EE85372002F0B20 /* FocusViewCell.xib in Resources */,
 				26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */,
 				26FE84311EDEF14300CD1B2A /* Discover.storyboard in Resources */,
@@ -701,6 +732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26FE842D1EDEF00900CD1B2A /* MainViewController.swift in Sources */,
+				26ED181E1EF4D4A400C20ABC /* GiftListView.swift in Sources */,
 				2664DC2B1EE85301002F0B20 /* FucusViewController.swift in Sources */,
 				2664DC2E1EE8534D002F0B20 /* HomeViewCell.swift in Sources */,
 				2664DC251EE850D6002F0B20 /* NetworkTools.swift in Sources */,
@@ -722,6 +754,7 @@
 				2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */,
 				2664DC191EE84F88002F0B20 /* AnchorModel.swift in Sources */,
 				26D4897A1EE98629009F36C6 /* RoomViewController.swift in Sources */,
+				26ED18131EF4D3CC00C20ABC /* GiftViewModel.swift in Sources */,
 				2664DC1C1EE84FF0002F0B20 /* SqliteTools.swift in Sources */,
 				2664DC321EE85372002F0B20 /* FocusViewCell.swift in Sources */,
 				2664DC291EE852BD002F0B20 /* AnchorViewController.swift in Sources */,
@@ -732,10 +765,13 @@
 				267570FA1EF2894D009701A3 /* Emoticon.swift in Sources */,
 				269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */,
 				267570FF1EF289EF009701A3 /* EmoticonViewModel.swift in Sources */,
+				26ED18171EF4D40200C20ABC /* GiftPackage.swift in Sources */,
+				26ED181B1EF4D45D00C20ABC /* GiftViewCell.swift in Sources */,
 				26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */,
 				26FE843A1EDEF73C00CD1B2A /* RankViewController.swift in Sources */,
 				267570FC1EF28966009701A3 /* EmoticonPackage.swift in Sources */,
 				26FE84381EDEF6DB00CD1B2A /* HomeViewController.swift in Sources */,
+				26ED18151EF4D3EB00C20ABC /* GiftModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
