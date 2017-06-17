@@ -91,6 +91,10 @@ extension SANPageCollectionView {
     func register(nib : UINib, identifier : String) {
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
     }
+    
+    func reloadData() {
+        collectionView.reloadData()
+    }
 }
 
 
