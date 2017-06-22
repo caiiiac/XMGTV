@@ -28,7 +28,7 @@ class SANWaterfallFlowLayout: UICollectionViewFlowLayout {
         return colHeights
     }()
     fileprivate var maxH : CGFloat = 0
-    fileprivate var startIndex = 0
+//    fileprivate var startIndex = 0
 }
 
 
@@ -47,7 +47,7 @@ extension SANWaterfallFlowLayout {
         let itemW = (collectionView!.bounds.width - self.sectionInset.left - self.sectionInset.right - self.minimumInteritemSpacing) / CGFloat(cols)
         
         // 3.计算所有的item的属性
-        for i in startIndex..<itemCount {
+        for i in attrsArray.count..<itemCount {
             // 1.设置每一个Item位置相关的属性
             let indexPath = IndexPath(item: i, section: 0)
             
@@ -74,7 +74,7 @@ extension SANWaterfallFlowLayout {
         maxH = colHeights.max()!
         
         // 5.给startIndex重新复制
-        startIndex = itemCount
+//        startIndex = itemCount
     }
 }
 
