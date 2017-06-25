@@ -62,6 +62,7 @@
 		26F096A11EFFFEF3008179A3 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0969B1EFFFEF3008179A3 /* yudpsocket.swift */; };
 		26F096A31EFFFF5E008179A3 /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F096A21EFFFF5E008179A3 /* Immessage.proto.swift */; };
 		26F096A51EFFFF65008179A3 /* IMMessage.proto in Resources */ = {isa = PBXBuildFile; fileRef = 26F096A41EFFFF65008179A3 /* IMMessage.proto */; };
+		26F096AA1F0008A4008179A3 /* AttrStringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F096A91F0008A4008179A3 /* AttrStringGenerator.swift */; };
 		26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */; };
 		26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FA1EDEEEDA00CD1B2A /* Main.storyboard */; };
 		26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FD1EDEEEDA00CD1B2A /* Assets.xcassets */; };
@@ -153,6 +154,7 @@
 		26F0969B1EFFFEF3008179A3 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
 		26F096A21EFFFF5E008179A3 /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
 		26F096A41EFFFF65008179A3 /* IMMessage.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMMessage.proto; sourceTree = "<group>"; };
+		26F096A91F0008A4008179A3 /* AttrStringGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttrStringGenerator.swift; sourceTree = "<group>"; };
 		26FE83F31EDEEEDA00CD1B2A /* XMGTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMGTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FE83FB1EDEEEDA00CD1B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				2664DC1B1EE84FF0002F0B20 /* SqliteTools.swift */,
 				2664DC241EE850D6002F0B20 /* NetworkTools.swift */,
 				2664DC341EE85465002F0B20 /* KingfisherExtension.swift */,
+				26F096A91F0008A4008179A3 /* AttrStringGenerator.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				26FE843A1EDEF73C00CD1B2A /* RankViewController.swift in Sources */,
 				267570FC1EF28966009701A3 /* EmoticonPackage.swift in Sources */,
 				26FE84381EDEF6DB00CD1B2A /* HomeViewController.swift in Sources */,
+				26F096AA1F0008A4008179A3 /* AttrStringGenerator.swift in Sources */,
 				26ED18151EF4D3EB00C20ABC /* GiftModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
