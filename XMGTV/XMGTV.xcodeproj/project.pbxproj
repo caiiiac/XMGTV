@@ -54,6 +54,14 @@
 		26ED181C1EF4D45D00C20ABC /* GiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26ED181A1EF4D45D00C20ABC /* GiftViewCell.xib */; };
 		26ED181E1EF4D4A400C20ABC /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED181D1EF4D4A400C20ABC /* GiftListView.swift */; };
 		26ED18201EF4D57100C20ABC /* GiftListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26ED181F1EF4D57100C20ABC /* GiftListView.xib */; };
+		26F0969C1EFFFEF3008179A3 /* SANSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F096951EFFFEF3008179A3 /* SANSocket.swift */; };
+		26F0969D1EFFFEF3008179A3 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F096971EFFFEF3008179A3 /* ysocket.swift */; };
+		26F0969E1EFFFEF3008179A3 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 26F096981EFFFEF3008179A3 /* ytcpsocket.c */; };
+		26F0969F1EFFFEF3008179A3 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F096991EFFFEF3008179A3 /* ytcpsocket.swift */; };
+		26F096A01EFFFEF3008179A3 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 26F0969A1EFFFEF3008179A3 /* yudpsocket.c */; };
+		26F096A11EFFFEF3008179A3 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0969B1EFFFEF3008179A3 /* yudpsocket.swift */; };
+		26F096A31EFFFF5E008179A3 /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F096A21EFFFF5E008179A3 /* Immessage.proto.swift */; };
+		26F096A51EFFFF65008179A3 /* IMMessage.proto in Resources */ = {isa = PBXBuildFile; fileRef = 26F096A41EFFFF65008179A3 /* IMMessage.proto */; };
 		26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */; };
 		26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FA1EDEEEDA00CD1B2A /* Main.storyboard */; };
 		26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FD1EDEEEDA00CD1B2A /* Assets.xcassets */; };
@@ -137,6 +145,14 @@
 		26ED181A1EF4D45D00C20ABC /* GiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftViewCell.xib; sourceTree = "<group>"; };
 		26ED181D1EF4D4A400C20ABC /* GiftListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
 		26ED181F1EF4D57100C20ABC /* GiftListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftListView.xib; sourceTree = "<group>"; };
+		26F096951EFFFEF3008179A3 /* SANSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANSocket.swift; sourceTree = "<group>"; };
+		26F096971EFFFEF3008179A3 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		26F096981EFFFEF3008179A3 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		26F096991EFFFEF3008179A3 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		26F0969A1EFFFEF3008179A3 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		26F0969B1EFFFEF3008179A3 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		26F096A21EFFFF5E008179A3 /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
+		26F096A41EFFFF65008179A3 /* IMMessage.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMMessage.proto; sourceTree = "<group>"; };
 		26FE83F31EDEEEDA00CD1B2A /* XMGTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMGTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FE83FB1EDEEEDA00CD1B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -320,6 +336,7 @@
 		26D489741EE985FC009F36C6 /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				26F096941EFFFEF3008179A3 /* Socket */,
 				267570FD1EF289E4009701A3 /* ViewModel */,
 				26D489761EE985FC009F36C6 /* Model */,
 				26D489751EE985FC009F36C6 /* Controller */,
@@ -366,6 +383,29 @@
 				26ED181F1EF4D57100C20ABC /* GiftListView.xib */,
 			);
 			path = GiftView;
+			sourceTree = "<group>";
+		};
+		26F096941EFFFEF3008179A3 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				26F096A41EFFFF65008179A3 /* IMMessage.proto */,
+				26F096A21EFFFF5E008179A3 /* Immessage.proto.swift */,
+				26F096951EFFFEF3008179A3 /* SANSocket.swift */,
+				26F096961EFFFEF3008179A3 /* ysocket */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		26F096961EFFFEF3008179A3 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				26F096971EFFFEF3008179A3 /* ysocket.swift */,
+				26F096981EFFFEF3008179A3 /* ytcpsocket.c */,
+				26F096991EFFFEF3008179A3 /* ytcpsocket.swift */,
+				26F0969A1EFFFEF3008179A3 /* yudpsocket.c */,
+				26F0969B1EFFFEF3008179A3 /* yudpsocket.swift */,
+			);
+			path = ysocket;
 			sourceTree = "<group>";
 		};
 		26FE83EA1EDEEEDA00CD1B2A = {
@@ -642,6 +682,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F096A51EFFFF65008179A3 /* IMMessage.proto in Resources */,
 				26FE84331EDEF14F00CD1B2A /* Profile.storyboard in Resources */,
 				26FE84351EDEF15900CD1B2A /* Rank.storyboard in Resources */,
 				26C951B81EE6FBF5008DA4B3 /* types.plist in Resources */,
@@ -733,6 +774,7 @@
 			files = (
 				26FE842D1EDEF00900CD1B2A /* MainViewController.swift in Sources */,
 				26ED181E1EF4D4A400C20ABC /* GiftListView.swift in Sources */,
+				26F096A01EFFFEF3008179A3 /* yudpsocket.c in Sources */,
 				2664DC2B1EE85301002F0B20 /* FucusViewController.swift in Sources */,
 				2664DC2E1EE8534D002F0B20 /* HomeViewCell.swift in Sources */,
 				2664DC251EE850D6002F0B20 /* NetworkTools.swift in Sources */,
@@ -740,6 +782,7 @@
 				26CA16C61EEEE8DA00369635 /* Emitterable.swift in Sources */,
 				267570F81EF2891D009701A3 /* EmoticonView.swift in Sources */,
 				26FE843F1EDEFAE900CD1B2A /* UIColor-Extension.swift in Sources */,
+				26F0969D1EFFFEF3008179A3 /* ysocket.swift in Sources */,
 				2664DC231EE85090002F0B20 /* HomeViewModel.swift in Sources */,
 				2664DC271EE85284002F0B20 /* FucusViewModel.swift in Sources */,
 				26437FC41EF020D1006884DA /* NibLoadable.swift in Sources */,
@@ -752,11 +795,15 @@
 				2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */,
 				26437FC61EF183E9006884DA /* SANPageCollectionView.swift in Sources */,
 				2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */,
+				26F0969C1EFFFEF3008179A3 /* SANSocket.swift in Sources */,
 				2664DC191EE84F88002F0B20 /* AnchorModel.swift in Sources */,
 				26D4897A1EE98629009F36C6 /* RoomViewController.swift in Sources */,
 				26ED18131EF4D3CC00C20ABC /* GiftViewModel.swift in Sources */,
+				26F0969E1EFFFEF3008179A3 /* ytcpsocket.c in Sources */,
 				2664DC1C1EE84FF0002F0B20 /* SqliteTools.swift in Sources */,
+				26F096A31EFFFF5E008179A3 /* Immessage.proto.swift in Sources */,
 				2664DC321EE85372002F0B20 /* FocusViewCell.swift in Sources */,
+				26F096A11EFFFEF3008179A3 /* yudpsocket.swift in Sources */,
 				2664DC291EE852BD002F0B20 /* AnchorViewController.swift in Sources */,
 				26437FC81EF18474006884DA /* SANPageCollectionViewLayout.swift in Sources */,
 				2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */,
@@ -767,6 +814,7 @@
 				267570FF1EF289EF009701A3 /* EmoticonViewModel.swift in Sources */,
 				26ED18171EF4D40200C20ABC /* GiftPackage.swift in Sources */,
 				26ED181B1EF4D45D00C20ABC /* GiftViewCell.swift in Sources */,
+				26F0969F1EFFFEF3008179A3 /* ytcpsocket.swift in Sources */,
 				26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */,
 				26FE843A1EDEF73C00CD1B2A /* RankViewController.swift in Sources */,
 				267570FC1EF28966009701A3 /* EmoticonPackage.swift in Sources */,
