@@ -18,6 +18,8 @@ class RoomViewController: UIViewController, Emitterable{
     
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
+    fileprivate lazy var socket : SANSocket = SANSocket(addr: "192.168.1.121", port: 7999)
+    fileprivate var beatsTimer : Timer?
     
     // MARK: 系统回调函数
     override func viewDidLoad() {
@@ -25,7 +27,16 @@ class RoomViewController: UIViewController, Emitterable{
         
         setupUI()
         
+        //监听键盘通知
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+        //连接聊天服务器
+        if socket.connectServer(10) {
+            print("连接成功")
+            addBeatsTimer()
+            socket.sendJoinMsg()
+            socket.delegate 
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +47,16 @@ class RoomViewController: UIViewController, Emitterable{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        socket.sendLeaveMsg()
+    }
+    
+    deinit {
+        beatsTimer?.invalidate()
+        beatsTimer = nil
     }
 }
 
@@ -128,11 +149,23 @@ extension RoomViewController {
 // MARK:- 监听用户输入的内容
 extension RoomViewController : ChatToolsViewDelegate, GiftListViewDelegate{
     func chatToolsView(toolView: ChatToolsView, message: String) {
-        print(message)
+        socket.sendTextMsg(message)
     }
     
     func giftListView(giftView: GiftListView, giftModel: GiftModel) {
-        print(giftModel.subject)
+        socket.sendGiftMsg(giftModel.subject, giftModel.img2, giftModel.coin)
+    }
+}
+
+//MARK: - 给服务器发送即时消息
+extension RoomViewController {
+    fileprivate func addBeatsTimer () {
+        beatsTimer = Timer(fireAt: Date(), interval: 9, target: self, selector: #selector(sendBeats), userInfo: nil, repeats: true)
+        RunLoop.main.add(beatsTimer!, forMode: .commonModes)
+    }
+    
+    @objc fileprivate func sendBeats() {
+        socket.sendBeatsData()
     }
 }
 
