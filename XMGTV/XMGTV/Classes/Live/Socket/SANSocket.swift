@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol SANSocketDelegate : class {
+    func socket(_ socket : SANSocket, joinRoom user : UserInfo)
+    func socket(_ socket : SANSocket, leaveRoom user : UserInfo)
+    func socket(_ socket : SANSocket, chatMsg : ChatMessage)
+    func socket(_ socket : SANSocket, giftMsg : GiftMessage)
+}
+
 enum MessageType : Int {
     case join = 0
     case leave = 1
@@ -16,6 +23,8 @@ enum MessageType : Int {
 }
 
 class SANSocket: NSObject {
+    weak var delegate : SANSocketDelegate?
+    
     fileprivate var tcpClient : TCPClient
     fileprivate var isConnected : Bool = false
     fileprivate lazy var user : UserInfo.Builder = {
@@ -75,15 +84,13 @@ extension SANSocket {
         switch type {
         case 0, 1:
             let user = try! UserInfo.parseFrom(data: msgData)
-            print(user.name, user.level, user.iconUrl)
+            type == 0 ? delegate?.socket(self, joinRoom: user) : delegate?.socket(self, leaveRoom: user)
         case 2:
             let chatMsg = try! ChatMessage.parseFrom(data: msgData)
-            print(chatMsg.text)
-            print(chatMsg.user.name, chatMsg.user.level, chatMsg.user.iconUrl)
+            delegate?.socket(self, chatMsg: chatMsg)
         case 3:
             let giftMsg = try! GiftMessage.parseFrom(data: msgData)
-            print(giftMsg.giftUrl, giftMsg.giftname, giftMsg.giftcount)
-            print(giftMsg.user.name, giftMsg.user.level, giftMsg.user.iconUrl)
+            delegate?.socket(self, giftMsg: giftMsg)
         default:
             print("其他类型消息")
         }
