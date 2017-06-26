@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6zT-Yv-wdW" customClass="ChatContentView" customModule="XMGTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="223"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mgp-w7-kXx">
+                    <rect key="frame" x="0.0" y="0.0" width="317" height="223"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="6zT-Yv-wdW" id="AGQ-pR-iyi"/>
+                        <outlet property="delegate" destination="6zT-Yv-wdW" id="wfk-4q-gqF"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Mgp-w7-kXx" secondAttribute="bottom" id="3iq-1V-R89"/>
+                <constraint firstItem="Mgp-w7-kXx" firstAttribute="top" secondItem="6zT-Yv-wdW" secondAttribute="top" id="X08-ii-Ou2"/>
+                <constraint firstItem="Mgp-w7-kXx" firstAttribute="leading" secondItem="6zT-Yv-wdW" secondAttribute="leading" id="eHg-lr-XMb"/>
+                <constraint firstAttribute="trailing" secondItem="Mgp-w7-kXx" secondAttribute="trailing" id="nmk-lV-mq4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableView" destination="Mgp-w7-kXx" id="6bc-kf-n11"/>
+            </connections>
+            <point key="canvasLocation" x="-143" y="-101"/>
+        </view>
+    </objects>
+</document>
