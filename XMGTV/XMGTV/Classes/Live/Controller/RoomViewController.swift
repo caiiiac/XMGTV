@@ -10,6 +10,7 @@ import UIKit
 
 private let kChatToolsViewHeight : CGFloat = 44
 private let kGiftlistViewHeight : CGFloat = kScreenH * 0.5
+private let kChatContentViewHeight : CGFloat = 200
 
 class RoomViewController: UIViewController, Emitterable{
     
@@ -18,6 +19,7 @@ class RoomViewController: UIViewController, Emitterable{
     
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
+    fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
     fileprivate lazy var socket : SANSocket = SANSocket(addr: "192.168.1.121", port: 7999)
     fileprivate var beatsTimer : Timer?
     
@@ -33,9 +35,10 @@ class RoomViewController: UIViewController, Emitterable{
         //连接聊天服务器
         if socket.connectServer(10) {
             print("连接成功")
+            socket.startReadMsg()
             addBeatsTimer()
             socket.sendJoinMsg()
-            socket.delegate 
+            socket.delegate = self
         }
     }
     
@@ -77,13 +80,20 @@ extension RoomViewController {
     }
     
     fileprivate func setupBottomView() {
-        // 1.设置chatToolsView
+        
+        // 设置Chat内容的View
+        chatContentView.frame = CGRect(x: 0, y: view.bounds.height - 44 - kChatContentViewHeight, width: view.bounds.width, height: kChatContentViewHeight)
+        chatContentView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        view.addSubview(chatContentView)
+
+        
+        // 设置chatToolsView
         chatToolsView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kChatToolsViewHeight)
         chatToolsView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         chatToolsView.delegate = self
         view.addSubview(chatToolsView)
         
-        // 2.设置giftListView
+        // 设置giftListView
         giftListView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kGiftlistViewHeight)
         giftListView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         view.addSubview(giftListView)
@@ -140,6 +150,8 @@ extension RoomViewController {
             UIView.setAnimationCurve(UIViewAnimationCurve(rawValue: 7)!)
             let endY = inputViewY == (kScreenH - kChatToolsViewHeight) ? kScreenH : inputViewY
             self.chatToolsView.frame.origin.y = endY
+            let contentEndY = inputViewY == (kScreenH - kChatToolsViewHeight) ? (kScreenH - kChatContentViewHeight - 44) : endY - kChatContentViewHeight
+            self.chatContentView.frame.origin.y = contentEndY
         })
     }
 }
@@ -169,3 +181,29 @@ extension RoomViewController {
     }
 }
 
+// MARK:- 接受聊天服务器返回的消息
+extension RoomViewController : SANSocketDelegate {
+    func socket(_ socket: SANSocket, joinRoom user: UserInfo) {
+        chatContentView.insertMsg(AttrStringGenerator.generateJoinLeaveRoom(user.name, true))
+    }
+    
+    func socket(_ socket: SANSocket, leaveRoom user: UserInfo) {
+        chatContentView.insertMsg(AttrStringGenerator.generateJoinLeaveRoom(user.name, false))
+    }
+    
+    func socket(_ socket: SANSocket, chatMsg: ChatMessage) {
+        // 1.通过富文本生成器, 生产需要的富文本
+        let chatMsgMAttr = AttrStringGenerator.generateTextMessage(chatMsg.user.name, chatMsg.text)
+        
+        // 2.将文本的属性字符串插入到内容View中
+        chatContentView.insertMsg(chatMsgMAttr)
+    }
+    
+    func socket(_ socket: SANSocket, giftMsg: GiftMessage) {
+        // 1.通过富文本生成器, 生产需要的富文本
+        let giftMsgAttr = AttrStringGenerator.generateGiftMessage(giftMsg.giftname, giftMsg.giftUrl, giftMsg.user.name)
+        
+        // 2.将文本的属性字符串插入到内容View中
+        chatContentView.insertMsg(giftMsgAttr)
+    }
+}
