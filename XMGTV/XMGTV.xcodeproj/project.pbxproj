@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2603FABB1F013C9F00055ABA /* ChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2603FABA1F013C9F00055ABA /* ChatContentView.swift */; };
+		2603FABD1F013CAE00055ABA /* ChatContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2603FABC1F013CAE00055ABA /* ChatContentView.xib */; };
+		2603FAC01F013D1C00055ABA /* ChatContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2603FABE1F013D1C00055ABA /* ChatContentCell.swift */; };
+		2603FAC11F013D1C00055ABA /* ChatContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2603FABF1F013D1C00055ABA /* ChatContentCell.xib */; };
 		26437FC41EF020D1006884DA /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC31EF020D1006884DA /* NibLoadable.swift */; };
 		26437FC61EF183E9006884DA /* SANPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC51EF183E9006884DA /* SANPageCollectionView.swift */; };
 		26437FC81EF18474006884DA /* SANPageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC71EF18474006884DA /* SANPageCollectionViewLayout.swift */; };
@@ -99,6 +103,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2603FABA1F013C9F00055ABA /* ChatContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentView.swift; sourceTree = "<group>"; };
+		2603FABC1F013CAE00055ABA /* ChatContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatContentView.xib; sourceTree = "<group>"; };
+		2603FABE1F013D1C00055ABA /* ChatContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentCell.swift; sourceTree = "<group>"; };
+		2603FABF1F013D1C00055ABA /* ChatContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatContentCell.xib; sourceTree = "<group>"; };
 		26437FC31EF020D1006884DA /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		26437FC51EF183E9006884DA /* SANPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageCollectionView.swift; sourceTree = "<group>"; };
 		26437FC71EF18474006884DA /* SANPageCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -209,6 +217,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2603FAB91F013C8900055ABA /* ChatContentView */ = {
+			isa = PBXGroup;
+			children = (
+				2603FABA1F013C9F00055ABA /* ChatContentView.swift */,
+				2603FABC1F013CAE00055ABA /* ChatContentView.xib */,
+				2603FABE1F013D1C00055ABA /* ChatContentCell.swift */,
+				2603FABF1F013D1C00055ABA /* ChatContentCell.xib */,
+			);
+			path = ChatContentView;
+			sourceTree = "<group>";
+		};
 		2664DC101EE84E8F002F0B20 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +390,7 @@
 		26D489771EE985FC009F36C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2603FAB91F013C8900055ABA /* ChatContentView */,
 				26ED18181EF4D44100C20ABC /* GiftView */,
 				267570F21EF287BE009701A3 /* ChatView */,
 			);
@@ -698,11 +718,13 @@
 				26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */,
 				26FE84311EDEF14300CD1B2A /* Discover.storyboard in Resources */,
 				267571071EF28A9C009701A3 /* QHSohuGifSort.plist in Resources */,
+				2603FABD1F013CAE00055ABA /* ChatContentView.xib in Resources */,
 				26D4897B1EE98629009F36C6 /* RoomViewController.xib in Resources */,
 				26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */,
 				267570F61EF28837009701A3 /* ChatToolsView.xib in Resources */,
 				267571061EF28A9C009701A3 /* QHNormalEmotionSort.plist in Resources */,
 				26FE842F1EDEF12E00CD1B2A /* Home.storyboard in Resources */,
+				2603FAC11F013D1C00055ABA /* ChatContentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,6 +815,7 @@
 				26FE843C1EDEF79F00CD1B2A /* SANNavigationController.swift in Sources */,
 				26D489701EE984E9009F36C6 /* NSDate-Extension.swift in Sources */,
 				267571021EF28A37009701A3 /* EmoticonViewCell.swift in Sources */,
+				2603FABB1F013C9F00055ABA /* ChatContentView.swift in Sources */,
 				2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */,
 				267570F41EF287D6009701A3 /* ChatToolsView.swift in Sources */,
 				2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */,
@@ -813,6 +836,7 @@
 				26D489731EE9853C009F36C6 /* Const.swift in Sources */,
 				2664DC351EE85465002F0B20 /* KingfisherExtension.swift in Sources */,
 				267570FA1EF2894D009701A3 /* Emoticon.swift in Sources */,
+				2603FAC01F013D1C00055ABA /* ChatContentCell.swift in Sources */,
 				269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */,
 				267570FF1EF289EF009701A3 /* EmoticonViewModel.swift in Sources */,
 				26ED18171EF4D40200C20ABC /* GiftPackage.swift in Sources */,
