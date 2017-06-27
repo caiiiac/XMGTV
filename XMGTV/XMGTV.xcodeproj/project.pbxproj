@@ -40,6 +40,9 @@
 		267571031EF28A37009701A3 /* EmoticonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267571011EF28A37009701A3 /* EmoticonViewCell.xib */; };
 		267571061EF28A9C009701A3 /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 267571041EF28A9C009701A3 /* QHNormalEmotionSort.plist */; };
 		267571071EF28A9C009701A3 /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 267571051EF28A9C009701A3 /* QHSohuGifSort.plist */; };
+		2684B3AA1F02AD0A0045C64A /* SANGiftContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684B3A91F02AD0A0045C64A /* SANGiftContainerView.swift */; };
+		2684B3AC1F02AD2D0045C64A /* SANGiftChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684B3AB1F02AD2D0045C64A /* SANGiftChannelView.swift */; };
+		2684B3AE1F02AD480045C64A /* SANGiftDigitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684B3AD1F02AD480045C64A /* SANGiftDigitLabel.swift */; };
 		269663881EE59FCA001C0085 /* SANWaterfallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269663871EE59FCA001C0085 /* SANWaterfallFlowLayout.swift */; };
 		2698C3EC1EE04B970063E5CF /* SANPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EB1EE04B970063E5CF /* SANPageView.swift */; };
 		2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */; };
@@ -136,6 +139,9 @@
 		267571011EF28A37009701A3 /* EmoticonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonViewCell.xib; sourceTree = "<group>"; };
 		267571041EF28A9C009701A3 /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
 		267571051EF28A9C009701A3 /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
+		2684B3A91F02AD0A0045C64A /* SANGiftContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANGiftContainerView.swift; sourceTree = "<group>"; };
+		2684B3AB1F02AD2D0045C64A /* SANGiftChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANGiftChannelView.swift; sourceTree = "<group>"; };
+		2684B3AD1F02AD480045C64A /* SANGiftDigitLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANGiftDigitLabel.swift; sourceTree = "<group>"; };
 		269663871EE59FCA001C0085 /* SANWaterfallFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANWaterfallFlowLayout.swift; sourceTree = "<group>"; };
 		2698C3EB1EE04B970063E5CF /* SANPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageView.swift; sourceTree = "<group>"; };
 		2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleView.swift; sourceTree = "<group>"; };
@@ -305,6 +311,16 @@
 				26ED18121EF4D3CC00C20ABC /* GiftViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2684B3A81F02ACE70045C64A /* SANGiftAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				2684B3A91F02AD0A0045C64A /* SANGiftContainerView.swift */,
+				2684B3AB1F02AD2D0045C64A /* SANGiftChannelView.swift */,
+				2684B3AD1F02AD480045C64A /* SANGiftDigitLabel.swift */,
+			);
+			path = SANGiftAnimation;
 			sourceTree = "<group>";
 		};
 		269663861EE59C8C001C0085 /* SANWaterfall */ = {
@@ -532,6 +548,7 @@
 		26FE84281EDEEFB700CD1B2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2684B3A81F02ACE70045C64A /* SANGiftAnimation */,
 				26CA16C41EEEE8C600369635 /* Protocol */,
 				26D489711EE98526009F36C6 /* Common */,
 				269663861EE59C8C001C0085 /* SANWaterfall */,
@@ -808,6 +825,7 @@
 				267570F81EF2891D009701A3 /* EmoticonView.swift in Sources */,
 				26FE843F1EDEFAE900CD1B2A /* UIColor-Extension.swift in Sources */,
 				26F0969D1EFFFEF3008179A3 /* ysocket.swift in Sources */,
+				2684B3AC1F02AD2D0045C64A /* SANGiftChannelView.swift in Sources */,
 				2664DC231EE85090002F0B20 /* HomeViewModel.swift in Sources */,
 				2664DC271EE85284002F0B20 /* FucusViewModel.swift in Sources */,
 				26437FC41EF020D1006884DA /* NibLoadable.swift in Sources */,
@@ -828,6 +846,7 @@
 				26F0969E1EFFFEF3008179A3 /* ytcpsocket.c in Sources */,
 				2664DC1C1EE84FF0002F0B20 /* SqliteTools.swift in Sources */,
 				26F096A31EFFFF5E008179A3 /* Immessage.proto.swift in Sources */,
+				2684B3AA1F02AD0A0045C64A /* SANGiftContainerView.swift in Sources */,
 				2664DC321EE85372002F0B20 /* FocusViewCell.swift in Sources */,
 				26F096A11EFFFEF3008179A3 /* yudpsocket.swift in Sources */,
 				2664DC291EE852BD002F0B20 /* AnchorViewController.swift in Sources */,
@@ -842,6 +861,7 @@
 				26ED18171EF4D40200C20ABC /* GiftPackage.swift in Sources */,
 				26ED181B1EF4D45D00C20ABC /* GiftViewCell.swift in Sources */,
 				26F0969F1EFFFEF3008179A3 /* ytcpsocket.swift in Sources */,
+				2684B3AE1F02AD480045C64A /* SANGiftDigitLabel.swift in Sources */,
 				26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */,
 				26FE843A1EDEF73C00CD1B2A /* RankViewController.swift in Sources */,
 				267570FC1EF28966009701A3 /* EmoticonPackage.swift in Sources */,
