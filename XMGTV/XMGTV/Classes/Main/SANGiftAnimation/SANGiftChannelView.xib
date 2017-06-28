@@ -1,10 +1,85 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="QuO-hb-lmR" customClass="HYGiftChannelView" customModule="_4_礼物动画展示" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clo-Jq-qyI" userLabel="背景">
+                    <rect key="frame" x="0.0" y="0.0" width="196.5" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMt-d7-Gjs" customClass="HYGiftDigitLabel" customModule="_4_礼物动画展示" customModuleProvider="target">
+                    <rect key="frame" x="211.5" y="0.0" width="37.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-nR-ZCr" userLabel="头像">
+                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qSf-nR-ZCr" secondAttribute="height" multiplier="1:1" id="ayw-Sk-ipK"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coderwhy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZv-28-IKw">
+                    <rect key="frame" x="54" y="5" width="51.5" height="13.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送出礼物【飞机】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbY-Rb-il9">
+                    <rect key="frame" x="54" y="27.5" width="98.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6fB-62-ppT" userLabel="礼物">
+                    <rect key="frame" x="152.5" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="6fB-62-ppT" secondAttribute="height" multiplier="1:1" id="eRu-Rb-nfH"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="uMt-d7-Gjs" firstAttribute="top" secondItem="QuO-hb-lmR" secondAttribute="top" id="93E-5N-szZ"/>
+                <constraint firstItem="Clo-Jq-qyI" firstAttribute="leading" secondItem="QuO-hb-lmR" secondAttribute="leading" id="AoS-60-tGS"/>
+                <constraint firstItem="uMt-d7-Gjs" firstAttribute="leading" secondItem="6fB-62-ppT" secondAttribute="trailing" constant="15" id="D8z-fq-F9h"/>
+                <constraint firstItem="tbY-Rb-il9" firstAttribute="leading" secondItem="qSf-nR-ZCr" secondAttribute="trailing" constant="10" id="DSM-Ud-UlW"/>
+                <constraint firstItem="uMt-d7-Gjs" firstAttribute="leading" secondItem="Clo-Jq-qyI" secondAttribute="trailing" constant="15" id="Fl9-2a-ueF"/>
+                <constraint firstItem="Clo-Jq-qyI" firstAttribute="top" secondItem="QuO-hb-lmR" secondAttribute="top" id="Mc0-ET-vDr"/>
+                <constraint firstAttribute="bottom" secondItem="qSf-nR-ZCr" secondAttribute="bottom" id="OZc-6A-0eB"/>
+                <constraint firstItem="6fB-62-ppT" firstAttribute="leading" secondItem="tbY-Rb-il9" secondAttribute="trailing" id="QjI-mH-oYA"/>
+                <constraint firstItem="WZv-28-IKw" firstAttribute="leading" secondItem="qSf-nR-ZCr" secondAttribute="trailing" constant="10" id="W7c-v7-2bx"/>
+                <constraint firstItem="qSf-nR-ZCr" firstAttribute="leading" secondItem="QuO-hb-lmR" secondAttribute="leading" id="Y1U-Ak-RNw"/>
+                <constraint firstAttribute="bottom" secondItem="6fB-62-ppT" secondAttribute="bottom" id="YqL-RL-cOj"/>
+                <constraint firstAttribute="bottom" secondItem="tbY-Rb-il9" secondAttribute="bottom" constant="2" id="cUv-Ik-AKb"/>
+                <constraint firstAttribute="bottom" secondItem="Clo-Jq-qyI" secondAttribute="bottom" id="dSp-2R-guN"/>
+                <constraint firstItem="6fB-62-ppT" firstAttribute="top" secondItem="QuO-hb-lmR" secondAttribute="top" id="gqY-3y-qjw"/>
+                <constraint firstItem="qSf-nR-ZCr" firstAttribute="top" secondItem="QuO-hb-lmR" secondAttribute="top" id="rld-xA-iJt"/>
+                <constraint firstItem="WZv-28-IKw" firstAttribute="top" secondItem="QuO-hb-lmR" secondAttribute="top" constant="5" id="sKc-LR-4Cs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="Clo-Jq-qyI" id="bKg-n2-yU2"/>
+                <outlet property="digitLabel" destination="uMt-d7-Gjs" id="S0f-OS-HY3"/>
+                <outlet property="giftDescLabel" destination="tbY-Rb-il9" id="z9m-RY-f7b"/>
+                <outlet property="giftImageView" destination="6fB-62-ppT" id="9Zr-1M-pZx"/>
+                <outlet property="iconImageView" destination="qSf-nR-ZCr" id="siw-ys-Eth"/>
+                <outlet property="senderLabel" destination="WZv-28-IKw" id="dU6-Vc-zjF"/>
+            </connections>
+            <point key="canvasLocation" x="45" y="136"/>
+        </view>
     </objects>
 </document>
