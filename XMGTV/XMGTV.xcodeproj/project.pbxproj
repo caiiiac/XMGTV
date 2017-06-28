@@ -71,6 +71,7 @@
 		26F096A51EFFFF65008179A3 /* IMMessage.proto in Resources */ = {isa = PBXBuildFile; fileRef = 26F096A41EFFFF65008179A3 /* IMMessage.proto */; };
 		26F096AA1F0008A4008179A3 /* AttrStringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F096A91F0008A4008179A3 /* AttrStringGenerator.swift */; };
 		26F3A4761F040202002524E1 /* SANGiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F3A4751F040202002524E1 /* SANGiftModel.swift */; };
+		26F3A4781F040242002524E1 /* SANGiftChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F3A4771F040242002524E1 /* SANGiftChannelView.xib */; };
 		26FE83F71EDEEEDA00CD1B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */; };
 		26FE83FC1EDEEEDA00CD1B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FA1EDEEEDA00CD1B2A /* Main.storyboard */; };
 		26FE83FE1EDEEEDA00CD1B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE83FD1EDEEEDA00CD1B2A /* Assets.xcassets */; };
@@ -171,6 +172,7 @@
 		26F096A41EFFFF65008179A3 /* IMMessage.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMMessage.proto; sourceTree = "<group>"; };
 		26F096A91F0008A4008179A3 /* AttrStringGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttrStringGenerator.swift; sourceTree = "<group>"; };
 		26F3A4751F040202002524E1 /* SANGiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANGiftModel.swift; sourceTree = "<group>"; };
+		26F3A4771F040242002524E1 /* SANGiftChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SANGiftChannelView.xib; sourceTree = "<group>"; };
 		26FE83F31EDEEEDA00CD1B2A /* XMGTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMGTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FE83F61EDEEEDA00CD1B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FE83FB1EDEEEDA00CD1B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			children = (
 				2684B3A91F02AD0A0045C64A /* SANGiftContainerView.swift */,
 				2684B3AB1F02AD2D0045C64A /* SANGiftChannelView.swift */,
+				26F3A4771F040242002524E1 /* SANGiftChannelView.xib */,
 				2684B3AD1F02AD480045C64A /* SANGiftDigitLabel.swift */,
 				26F3A4751F040202002524E1 /* SANGiftModel.swift */,
 			);
@@ -730,6 +733,7 @@
 				26FE84351EDEF15900CD1B2A /* Rank.storyboard in Resources */,
 				26C951B81EE6FBF5008DA4B3 /* types.plist in Resources */,
 				2664DC2F1EE8534D002F0B20 /* HomeViewCell.xib in Resources */,
+				26F3A4781F040242002524E1 /* SANGiftChannelView.xib in Resources */,
 				26ED18201EF4D57100C20ABC /* GiftListView.xib in Resources */,
 				26FE84011EDEEEDA00CD1B2A /* LaunchScreen.storyboard in Resources */,
 				267571031EF28A37009701A3 /* EmoticonViewCell.xib in Resources */,
