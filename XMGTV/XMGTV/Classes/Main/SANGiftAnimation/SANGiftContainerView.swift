@@ -48,7 +48,7 @@ extension SANGiftContainerView {
     }
 }
 
-
+// MARK:- 对外提供函数
 extension SANGiftContainerView {
     func showGiftModel(_ giftModel : SANGiftModel) {
         // 1.判断正在忙的ChanelView和赠送的新礼物的(username/giftname)
