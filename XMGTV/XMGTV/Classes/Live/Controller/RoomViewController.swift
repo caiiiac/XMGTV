@@ -17,7 +17,7 @@ class RoomViewController: UIViewController, Emitterable{
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
     
-    fileprivate lazy var containerView : SANGiftContainerView = SANGiftContainerView(frame: CGRect(x: 0, y: 100, width: 250, height: 100));
+    fileprivate lazy var containerView : SANGiftContainerView = SANGiftContainerView()
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
     fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
@@ -70,8 +70,8 @@ extension RoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
         setupBottomView()
-        
-//        view.addSubview(containerView)
+        containerView.frame = CGRect(x: 0, y: 100, width: 250, height: 100)
+        view.addSubview(containerView)
     }
     
     fileprivate func setupBlurView() {
