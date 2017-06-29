@@ -17,6 +17,7 @@ class RoomViewController: UIViewController, Emitterable{
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
     
+    fileprivate lazy var containerView : SANGiftContainerView = SANGiftContainerView(frame: CGRect(x: 0, y: 100, width: 250, height: 100));
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
     fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
@@ -69,6 +70,8 @@ extension RoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
         setupBottomView()
+        
+//        view.addSubview(containerView)
     }
     
     fileprivate func setupBlurView() {
@@ -192,7 +195,7 @@ extension RoomViewController : SANSocketDelegate {
     }
     
     func socket(_ socket: SANSocket, chatMsg: ChatMessage) {
-        // 1.通过富文本生成器, 生产需要的富文本
+        // 1.通过富文本生成器, 生成需要的富文本
         let chatMsgMAttr = AttrStringGenerator.generateTextMessage(chatMsg.user.name, chatMsg.text)
         
         // 2.将文本的属性字符串插入到内容View中
@@ -200,10 +203,15 @@ extension RoomViewController : SANSocketDelegate {
     }
     
     func socket(_ socket: SANSocket, giftMsg: GiftMessage) {
-        // 1.通过富文本生成器, 生产需要的富文本
+        // 1.通过富文本生成器, 生成需要的富文本
         let giftMsgAttr = AttrStringGenerator.generateGiftMessage(giftMsg.giftname, giftMsg.giftUrl, giftMsg.user.name)
         
         // 2.将文本的属性字符串插入到内容View中
         chatContentView.insertMsg(giftMsgAttr)
+        
+        let gif = SANGiftModel(senderName: giftMsg.user.name, senderURL: giftMsg.giftUrl, giftName: giftMsg.giftname, giftURL: giftMsg.giftUrl)
+        containerView.showGiftModel(gif)
+        
+        
     }
 }
