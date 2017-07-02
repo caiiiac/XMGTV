@@ -99,7 +99,8 @@ extension SANGiftContainerView {
 
 //MARK: - 监听动画是否执行结束
 extension SANGiftContainerView : SANGiftChannelViewDelegate {
-    func giftAnimationDidCompletion() {
+    
+    func giftAnimationDidCompletion(channelView : SANGiftChannelView) {
         if cacheGiftModels.count > 0 {
             let giftModel = cacheGiftModels.first!
             cacheGiftModels.removeFirst()
@@ -107,7 +108,7 @@ extension SANGiftContainerView : SANGiftChannelViewDelegate {
             for cacheModel in cacheGiftModels.reversed(){
                 if cacheModel.isEqual(giftModel) {
                     cacheGiftModels.remove(at: cacheGiftModels.index(of: cacheModel)!)
-                    showGiftModel(cacheModel)
+                    channelView.addOnceGiftAnimToCache()
                 }
             }
         }
