@@ -20,7 +20,7 @@ enum SANGiftChannelState {
 }
 
 protocol SANGiftChannelViewDelegate : class{
-    func giftAnimationDidCompletion()
+    func giftAnimationDidCompletion(channelView : SANGiftChannelView)
 }
 
 class SANGiftChannelView: UIView, NibLoadable {
@@ -52,7 +52,8 @@ class SANGiftChannelView: UIView, NibLoadable {
             iconImageView.image = UIImage(named: giftModel.senderURL)
             senderLabel.text = giftModel.senderName
             giftDescLabel.text = "送出礼物：【\(giftModel.giftName)】"
-            giftImageView.image = UIImage(named: giftModel.giftURL)
+//            giftImageView.image = UIImage(named: giftModel.giftURL)
+            giftImageView.setImage(giftModel.giftURL)
             
         }
     }
@@ -140,7 +141,7 @@ extension SANGiftChannelView {
             self.state = .idle
             
             //结束动画代理
-            self.delegate?.giftAnimationDidCompletion()
+            self.delegate?.giftAnimationDidCompletion(channelView: self)
         })
     }
 }
