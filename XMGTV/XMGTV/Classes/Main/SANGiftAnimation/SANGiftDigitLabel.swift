@@ -11,6 +11,9 @@ import UIKit
 class SANGiftDigitLabel: UILabel {
 
     override func drawText(in rect: CGRect) {
+        //保存文本颜色
+        let oldColor = textColor
+        
         // 1.获取上下文
         let context = UIGraphicsGetCurrentContext()
         
@@ -22,7 +25,9 @@ class SANGiftDigitLabel: UILabel {
         super.drawText(in: rect)
         
         context?.setTextDrawingMode(.fill)
-        textColor = UIColor.white
+        textColor = oldColor
+        shadowOffset = CGSize.zero
+        
         super.drawText(in: rect)
     }
     
