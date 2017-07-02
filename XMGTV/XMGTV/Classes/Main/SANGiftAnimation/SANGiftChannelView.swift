@@ -8,11 +8,19 @@
 
 import UIKit
 
+private let kShowChannelDuration : TimeInterval = 0.25
+private let kHiddenChannelDelay : TimeInterval = 3.0
+
+
 enum SANGiftChannelState {
     case idle
     case animating
     case willEnd
     case endAnimating
+}
+
+protocol SANGiftChannelViewDelegate : class{
+    func giftAnimationDidCompletion()
 }
 
 class SANGiftChannelView: UIView, NibLoadable {
@@ -25,9 +33,13 @@ class SANGiftChannelView: UIView, NibLoadable {
     @IBOutlet weak var giftImageView: UIImageView!
     @IBOutlet weak var digitLabel: SANGiftDigitLabel!
     
+    //MARK: - 内部属性
     fileprivate var cacheNumber : Int = 0
     fileprivate var currentNumber : Int = 0
+    
+    //MARK: - 对外属性
     var state : SANGiftChannelState = .idle
+    weak var delegate : SANGiftChannelViewDelegate?
     
     var giftModel : SANGiftModel? {
         didSet {
@@ -42,9 +54,6 @@ class SANGiftChannelView: UIView, NibLoadable {
             giftDescLabel.text = "送出礼物：【\(giftModel.giftName)】"
             giftImageView.image = UIImage(named: giftModel.giftURL)
             
-            // 3.将ChanelView弹出
-            state = .animating
-            performAnimation()
         }
     }
 }
@@ -67,56 +76,69 @@ extension SANGiftChannelView {
 
 // MARK:- 对外提供的函数
 extension SANGiftChannelView {
-    func addOnceToCache() {
+    func addOnceGiftAnimToCache() {
         
-        if state == .willEnd {
-            performDigitAnimation()
-            NSObject.cancelPreviousPerformRequests(withTarget: self)
-        } else {
+        if state == .animating {
             cacheNumber += 1
+        } else {
+            NSObject.cancelPreviousPerformRequests(withTarget: self)
+            performDigitAnimation()
         }
     }
+    
 }
 
 
 // MARK:- 执行动画代码
 extension SANGiftChannelView {
     fileprivate func performAnimation() {
-        UIView.animate(withDuration: 0.25, animations: {
-            self.alpha = 1.0
-            self.frame.origin.x = 0
-        }, completion: { isFinished in
+        //改变状态
+        state = .animating
+        
+        //弹出channelView
+        UIView.animate(withDuration: kShowChannelDuration, animations: {
+            
+        }) { (isFinished : Bool) in
             self.performDigitAnimation()
-        })
+        }
     }
+
     
     fileprivate func performDigitAnimation() {
+        digitLabel.alpha = 1.0
         currentNumber += 1
         digitLabel.text = "x\(currentNumber)"
-        digitLabel.showDigitAnimation {
+        
+        
+        digitLabel.showDigitAnimation(kShowChannelDuration, {
             
             if self.cacheNumber > 0 {
                 self.cacheNumber -= 1
                 self.performDigitAnimation()
             } else {
                 self.state = .willEnd
-                self.perform(#selector(self.performEndAnimation), with: nil, afterDelay: 3.0)
+                self.perform(#selector(self.performEndAnimation), with: nil, afterDelay: kHiddenChannelDelay)
             }
             
-        }
+        })
     }
     
     @objc fileprivate func performEndAnimation() {
         
         state = .endAnimating
         
-        UIView.animate(withDuration: 0.25, animations: {
+        UIView.animate(withDuration: kShowChannelDuration, animations: {
             self.frame.origin.x = UIScreen.main.bounds.width
             self.alpha = 0.0
         }, completion: { isFinished in
             self.giftModel = nil
+            self.digitLabel.alpha = 0.0
             self.frame.origin.x = -self.frame.width
+            self.currentNumber = 0
             self.state = .idle
+            
+            //结束动画代理
+            self.delegate?.giftAnimationDidCompletion()
         })
     }
 }
