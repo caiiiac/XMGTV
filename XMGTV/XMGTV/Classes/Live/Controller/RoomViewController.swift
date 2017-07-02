@@ -17,11 +17,13 @@ class RoomViewController: UIViewController, Emitterable{
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
     
-    fileprivate lazy var containerView : SANGiftContainerView = SANGiftContainerView()
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
     fileprivate lazy var chatContentView : ChatContentView = ChatContentView.loadFromNib()
-    fileprivate lazy var socket : SANSocket = SANSocket(addr: "192.168.1.121", port: 7999)
+    
+    fileprivate lazy var socket : SANSocket = SANSocket(addr: "192.168.1.103", port: 7999)
+    fileprivate lazy var giftContainerView : SANGiftContainerView = SANGiftContainerView(frame: CGRect(x: 0, y: 100, width: 250, height: 100))
+
     fileprivate var beatsTimer : Timer?
     
     // MARK: 系统回调函数
@@ -70,8 +72,7 @@ extension RoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
         setupBottomView()
-        containerView.frame = CGRect(x: 0, y: 100, width: 250, height: 100)
-        view.addSubview(containerView)
+        view.addSubview(giftContainerView)
     }
     
     fileprivate func setupBlurView() {
@@ -209,8 +210,8 @@ extension RoomViewController : SANSocketDelegate {
         // 2.将文本的属性字符串插入到内容View中
         chatContentView.insertMsg(giftMsgAttr)
         
-        let gif = SANGiftModel(senderName: giftMsg.user.name, senderURL: giftMsg.giftUrl, giftName: giftMsg.giftname, giftURL: giftMsg.giftUrl)
-        containerView.showGiftModel(gif)
+        let gif = SANGiftModel(senderName: giftMsg.user.name, senderURL: giftMsg.user.iconUrl, giftName: giftMsg.giftname, giftURL: giftMsg.giftUrl)
+            giftContainerView.showGiftModel(gif)
         
         
     }
