@@ -32,8 +32,8 @@ class SANGiftDigitLabel: UILabel {
     }
     
     
-    func showDigitAnimation(_ complection : @escaping () -> ()) {
-        UIView.animateKeyframes(withDuration: 0.25, delay: 0, options: [], animations: {
+    func showDigitAnimation(_ duration : TimeInterval, _ complection : @escaping () -> ()) {
+        UIView.animateKeyframes(withDuration: duration, delay: 0, options: [], animations: {
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5, animations: {
                 self.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
             })
