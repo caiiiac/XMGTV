@@ -92,7 +92,8 @@ extension SANGiftChannelView {
         
         //弹出channelView
         UIView.animate(withDuration: kShowChannelDuration, animations: {
-            
+            self.frame.origin.x = 0
+            self.alpha = 1.0
         }) { (isFinished : Bool) in
             self.performDigitAnimation()
         }
