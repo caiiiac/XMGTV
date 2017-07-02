@@ -86,12 +86,7 @@ extension SANGiftChannelView {
         }
     }
     
-}
-
-
-// MARK:- 执行动画代码
-extension SANGiftChannelView {
-    fileprivate func performAnimation() {
+    func performAnimation() {
         //改变状态
         state = .animating
         
@@ -103,6 +98,12 @@ extension SANGiftChannelView {
         }
     }
 
+    
+}
+
+
+// MARK:- 执行动画代码
+extension SANGiftChannelView {
     
     fileprivate func performDigitAnimation() {
         digitLabel.alpha = 1.0
