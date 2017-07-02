@@ -75,8 +75,8 @@ extension SANGiftContainerView {
     //检查是否有giftModel正在被执行动画
     fileprivate func checkUsingChanelView(_ giftModel : SANGiftModel) -> SANGiftChannelView? {
         for channelView in channelViews {
-            if let giftModel = channelView.giftModel {
-                if giftModel.isEqual(channelView.giftModel) && channelView.state != .endAnimating {
+            if let channelModel = channelView.giftModel {
+                if channelModel.isEqual(giftModel) && channelView.state != .endAnimating {
                     return channelView
                 }
             }
@@ -104,6 +104,12 @@ extension SANGiftContainerView : SANGiftChannelViewDelegate {
             let giftModel = cacheGiftModels.first!
             cacheGiftModels.removeFirst()
             showGiftModel(giftModel)
+            for cacheModel in cacheGiftModels.reversed(){
+                if cacheModel.isEqual(giftModel) {
+                    cacheGiftModels.remove(at: cacheGiftModels.index(of: cacheModel)!)
+                    showGiftModel(cacheModel)
+                }
+            }
         }
     }
 }
