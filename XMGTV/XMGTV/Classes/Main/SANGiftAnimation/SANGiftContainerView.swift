@@ -42,6 +42,7 @@ extension SANGiftContainerView {
             let channelView = SANGiftChannelView.loadFromNib()
             channelView.frame = CGRect(x: x, y: y, width: w, height: h)
             channelView.alpha = 0.0
+            channelView.delegate = self
             addSubview(channelView)
             channelViews.append(channelView)
         }
@@ -53,29 +54,39 @@ extension SANGiftContainerView {
     func showGiftModel(_ giftModel : SANGiftModel) {
         // 1.判断正在忙的ChanelView和赠送的新礼物的(username/giftname)
         if let channelView = checkUsingChanelView(giftModel) {
-            channelView.addOnceToCache()
+            channelView.addOnceGiftAnimToCache()
+            return
         }
         
         // 2.判断有没有闲置的ChanelView
         if let channelView = checkIdleChannelView() {
             channelView.giftModel = giftModel
+            channelView.performAnimation()
+            return
         }
         
         // 3.将数据放入缓存中
         cacheGiftModels.append(giftModel)
     }
-    
-    private func checkUsingChanelView(_ giftModel : SANGiftModel) -> SANGiftChannelView? {
+}
+
+//MARK: - 私有函数
+extension SANGiftContainerView {
+    //检查是否有giftModel正在被执行动画
+    fileprivate func checkUsingChanelView(_ giftModel : SANGiftModel) -> SANGiftChannelView? {
         for channelView in channelViews {
-            if giftModel.isEqual(channelView.giftModel) && channelView.state != .endAnimating {
-                return channelView
+            if let giftModel = channelView.giftModel {
+                if giftModel.isEqual(channelView.giftModel) && channelView.state != .endAnimating {
+                    return channelView
+                }
             }
         }
         
         return nil
     }
     
-    private func checkIdleChannelView() -> SANGiftChannelView? {
+    //检查是否有闲置的channelView
+    fileprivate func checkIdleChannelView() -> SANGiftChannelView? {
         for channelView in channelViews {
             if channelView.state == .idle {
                 return channelView
@@ -85,4 +96,15 @@ extension SANGiftContainerView {
         return nil
     }
 }
- 
+
+//MARK: - 监听动画是否执行结束
+extension SANGiftContainerView : SANGiftChannelViewDelegate {
+    func giftAnimationDidCompletion() {
+        if cacheGiftModels.count > 0 {
+            let giftModel = cacheGiftModels.first!
+            cacheGiftModels.removeFirst()
+            showGiftModel(giftModel)
+        }
+    }
+}
+
