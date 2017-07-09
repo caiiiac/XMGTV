@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import IJKMediaFramework
+
 
 private let kChatToolsViewHeight : CGFloat = 44
 private let kGiftlistViewHeight : CGFloat = kScreenH * 0.5
@@ -16,6 +18,9 @@ class RoomViewController: UIViewController, Emitterable{
     
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var nickNameLabel: UILabel!
+    @IBOutlet weak var roomNumLabel: UILabel!
     
     fileprivate lazy var chatToolsView : ChatToolsView = ChatToolsView.loadFromNib()
     fileprivate lazy var giftListView : GiftListView = GiftListView.loadFromNib()
@@ -25,6 +30,15 @@ class RoomViewController: UIViewController, Emitterable{
     fileprivate lazy var giftContainerView : SANGiftContainerView = SANGiftContainerView(frame: CGRect(x: 0, y: 100, width: 250, height: 100))
 
     fileprivate var beatsTimer : Timer?
+    
+    fileprivate lazy var roomVM : RoomViewModel = RoomViewModel()
+    
+    //播放器
+    fileprivate var player : IJKFFMoviePlayerController?
+    
+    // MARK: 对外提供控件属性
+    var anchor : AnchorModel?
+    
     
     // MARK: 系统回调函数
     override func viewDidLoad() {
@@ -43,6 +57,11 @@ class RoomViewController: UIViewController, Emitterable{
             socket.sendJoinMsg()
             socket.delegate = self
         }
+        
+        // 加载房间信息
+        loadRoomInfo()
+        // 设置内容
+        setupAnchorInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,11 +77,13 @@ class RoomViewController: UIViewController, Emitterable{
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         socket.sendLeaveMsg()
+        player?.shutdown()
     }
     
     deinit {
         beatsTimer?.invalidate()
         beatsTimer = nil
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -102,6 +123,56 @@ extension RoomViewController {
         giftListView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         view.addSubview(giftListView)
         giftListView.delegate = self
+    }
+}
+
+// MARK:- 加载房间信息
+extension RoomViewController {
+    fileprivate func loadRoomInfo() {
+        if let roomid = anchor?.roomid, let uid = anchor?.uid {
+            print(roomid, uid)
+            roomVM.loadLiveURL(roomid, uid, {
+                self.setupDisplayView()
+            })
+        }
+    }
+    
+    fileprivate func setupDisplayView() {
+        // 0.关闭log
+        IJKFFMoviePlayerController.setLogReport(false)
+        
+        // 1.初始化播放器
+        let url = URL(string: roomVM.liveURL)
+        player = IJKFFMoviePlayerController(contentURL: url, with: nil)
+        
+        // 2.设置播放器View的位置和尺寸
+        if anchor?.push == 1 {
+            let screenW = UIScreen.main.bounds.width
+            player?.view.frame = CGRect(x: 0, y: 150, width: screenW, height: screenW * 3 / 4)
+        } else {
+            player?.view.frame = view.bounds
+        }
+        
+        // 3.将view添加到控制器的view中
+        bgImageView.insertSubview(player!.view, at: 1)
+        
+        // 4.准备播放
+        DispatchQueue.global().async {
+            self.player?.prepareToPlay()
+            self.player?.play()
+        }
+    }
+    
+}
+
+// MARK:- 设置内容
+extension RoomViewController {
+    fileprivate func setupAnchorInfo() {
+        bgImageView.setImage(anchor?.pic74)
+        nickNameLabel.text = anchor?.name
+        roomNumLabel.text = "房间号：\(anchor!.roomid)"
+        iconImageView.setImage(anchor?.pic51)
+        
     }
 }
 

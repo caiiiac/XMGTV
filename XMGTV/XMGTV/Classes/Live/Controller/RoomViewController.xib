@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,6 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoomViewController" customModule="XMGTV" customModuleProvider="target">
             <connections>
                 <outlet property="bgImageView" destination="J6l-Eg-6AP" id="NrI-Vb-ukO"/>
+                <outlet property="iconImageView" destination="6lz-o4-A7R" id="JTR-MW-1tX"/>
+                <outlet property="nickNameLabel" destination="jrd-zs-Vhh" id="Ymr-8e-URV"/>
+                <outlet property="roomNumLabel" destination="gTh-gu-yj8" id="xcV-VU-4vn"/>
                 <outlet property="view" destination="taO-jQ-YWn" id="Woh-6s-IaF"/>
             </connections>
         </placeholder>
@@ -68,7 +71,7 @@
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czS-a5-FWz">
-                    <rect key="frame" x="10" y="30" width="188" height="32"/>
+                    <rect key="frame" x="10" y="30" width="174.5" height="32"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6lz-o4-A7R">
                             <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
@@ -76,8 +79,8 @@
                                 <constraint firstAttribute="width" secondItem="6lz-o4-A7R" secondAttribute="height" multiplier="1:1" id="LYA-LC-pgZ"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新人倩倩求爆个灯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrd-zs-Vhh">
-                            <rect key="frame" x="40" y="2" width="90" height="13.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新人倩倩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrd-zs-Vhh">
+                            <rect key="frame" x="40" y="2" width="45" height="13.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -89,7 +92,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYp-KV-1Vh">
-                            <rect key="frame" x="138" y="7" width="50" height="18"/>
+                            <rect key="frame" x="124.5" y="7" width="50" height="18"/>
                             <color key="backgroundColor" red="0.81176470590000005" green="0.58431372550000005" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="Kg2-0b-Cm7"/>
@@ -106,10 +109,10 @@
                     </subviews>
                     <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="fYp-KV-1Vh" firstAttribute="leading" secondItem="gTh-gu-yj8" secondAttribute="trailing" constant="8" id="2t6-Jx-MLQ"/>
                         <constraint firstItem="jrd-zs-Vhh" firstAttribute="leading" secondItem="6lz-o4-A7R" secondAttribute="trailing" constant="8" id="8FE-cX-k8N"/>
                         <constraint firstAttribute="bottom" secondItem="6lz-o4-A7R" secondAttribute="bottom" id="8NJ-8p-flm"/>
                         <constraint firstItem="6lz-o4-A7R" firstAttribute="top" secondItem="czS-a5-FWz" secondAttribute="top" id="F6J-rU-lYp"/>
-                        <constraint firstItem="fYp-KV-1Vh" firstAttribute="leading" secondItem="jrd-zs-Vhh" secondAttribute="trailing" constant="8" id="Fn0-ZI-wvd"/>
                         <constraint firstItem="jrd-zs-Vhh" firstAttribute="top" secondItem="czS-a5-FWz" secondAttribute="top" constant="2" id="M3P-Oe-r9c"/>
                         <constraint firstItem="gTh-gu-yj8" firstAttribute="leading" secondItem="6lz-o4-A7R" secondAttribute="trailing" constant="8" id="Nze-f3-Ffo"/>
                         <constraint firstAttribute="bottom" secondItem="gTh-gu-yj8" secondAttribute="bottom" constant="3" id="Ohg-0z-29L"/>
