@@ -11,7 +11,6 @@
 		2603FABD1F013CAE00055ABA /* ChatContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2603FABC1F013CAE00055ABA /* ChatContentView.xib */; };
 		2603FAC01F013D1C00055ABA /* ChatContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2603FABE1F013D1C00055ABA /* ChatContentCell.swift */; };
 		2603FAC11F013D1C00055ABA /* ChatContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2603FABF1F013D1C00055ABA /* ChatContentCell.xib */; };
-		2614F69B1F11F8B70075CFAA /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2614F69A1F11F8B70075CFAA /* IJKMediaFramework.framework */; };
 		2614F69E1F11FCD90075CFAA /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2614F69C1F11FB470075CFAA /* libstdc++.tbd */; };
 		26437FC41EF020D1006884DA /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC31EF020D1006884DA /* NibLoadable.swift */; };
 		26437FC61EF183E9006884DA /* SANPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC51EF183E9006884DA /* SANPageCollectionView.swift */; };
@@ -115,7 +114,6 @@
 		2603FABC1F013CAE00055ABA /* ChatContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatContentView.xib; sourceTree = "<group>"; };
 		2603FABE1F013D1C00055ABA /* ChatContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentCell.swift; sourceTree = "<group>"; };
 		2603FABF1F013D1C00055ABA /* ChatContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatContentCell.xib; sourceTree = "<group>"; };
-		2614F69A1F11F8B70075CFAA /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		2614F69C1F11FB470075CFAA /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		26437FC31EF020D1006884DA /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		26437FC51EF183E9006884DA /* SANPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageCollectionView.swift; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 				2664DC211EE85053002F0B20 /* libz.tbd in Frameworks */,
 				2664DC1F1EE85048002F0B20 /* libsqlite3.0.tbd in Frameworks */,
 				A3497EAE0F1C9DC80334AC60 /* Pods_XMGTV.framework in Frameworks */,
-				2614F69B1F11F8B70075CFAA /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +360,6 @@
 		26C951B61EE6FBF5008DA4B3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				2614F69A1F11F8B70075CFAA /* IJKMediaFramework.framework */,
 				26C951B71EE6FBF5008DA4B3 /* types.plist */,
 				267571041EF28A9C009701A3 /* QHNormalEmotionSort.plist */,
 				267571051EF28A9C009701A3 /* QHSohuGifSort.plist */,
