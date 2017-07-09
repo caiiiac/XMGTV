@@ -81,6 +81,7 @@ extension AnchorViewController : UICollectionViewDataSource, SANWaterfallLayoutD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let roomVc = RoomViewController()
+        roomVc.anchor = homeVM.anchorModels[indexPath.item]
         navigationController?.pushViewController(roomVc, animated: true)
     }
     
