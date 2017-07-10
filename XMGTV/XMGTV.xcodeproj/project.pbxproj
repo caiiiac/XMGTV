@@ -50,6 +50,11 @@
 		2698C3EE1EE04BBB0063E5CF /* SANTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */; };
 		2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3EF1EE04BC90063E5CF /* SANContentView.swift */; };
 		2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */; };
+		26A326CF1F13BC1900AF698F /* NormalRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A326C81F13BC1900AF698F /* NormalRankViewController.swift */; };
+		26A326D01F13BC1900AF698F /* SubrankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A326C91F13BC1900AF698F /* SubrankViewController.swift */; };
+		26A326D11F13BC1900AF698F /* WeeklyRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A326CA1F13BC1900AF698F /* WeeklyRankViewController.swift */; };
+		26A326D21F13BC1900AF698F /* WeekrankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A326CB1F13BC1900AF698F /* WeekrankViewController.swift */; };
+		26A326D31F13BC1900AF698F /* RankType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A326CD1F13BC1900AF698F /* RankType.swift */; };
 		26B825FE1F112466002B7E3D /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B825FD1F112466002B7E3D /* RoomViewModel.swift */; };
 		26C951B81EE6FBF5008DA4B3 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26C951B71EE6FBF5008DA4B3 /* types.plist */; };
 		26CA16C61EEEE8DA00369635 /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA16C51EEEE8DA00369635 /* Emitterable.swift */; };
@@ -154,6 +159,11 @@
 		2698C3ED1EE04BBB0063E5CF /* SANTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleView.swift; sourceTree = "<group>"; };
 		2698C3EF1EE04BC90063E5CF /* SANContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANContentView.swift; sourceTree = "<group>"; };
 		2698C3F11EE04BDD0063E5CF /* SANTitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANTitleStyle.swift; sourceTree = "<group>"; };
+		26A326C81F13BC1900AF698F /* NormalRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalRankViewController.swift; sourceTree = "<group>"; };
+		26A326C91F13BC1900AF698F /* SubrankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubrankViewController.swift; sourceTree = "<group>"; };
+		26A326CA1F13BC1900AF698F /* WeeklyRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyRankViewController.swift; sourceTree = "<group>"; };
+		26A326CB1F13BC1900AF698F /* WeekrankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekrankViewController.swift; sourceTree = "<group>"; };
+		26A326CD1F13BC1900AF698F /* RankType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankType.swift; sourceTree = "<group>"; };
 		26B825FD1F112466002B7E3D /* RoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
 		26C951B71EE6FBF5008DA4B3 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
 		26CA16C51EEEE8DA00369635 /* Emitterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
@@ -358,6 +368,32 @@
 				26437FC71EF18474006884DA /* SANPageCollectionViewLayout.swift */,
 			);
 			path = SANPageView;
+			sourceTree = "<group>";
+		};
+		26A326C71F13BC1900AF698F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26A326C81F13BC1900AF698F /* NormalRankViewController.swift */,
+				26A326C91F13BC1900AF698F /* SubrankViewController.swift */,
+				26A326CA1F13BC1900AF698F /* WeeklyRankViewController.swift */,
+				26A326CB1F13BC1900AF698F /* WeekrankViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		26A326CC1F13BC1900AF698F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26A326CD1F13BC1900AF698F /* RankType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26A326CE1F13BC1900AF698F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		26C951B61EE6FBF5008DA4B3 /* Resource */ = {
@@ -587,6 +623,9 @@
 		26FE842A1EDEEFB700CD1B2A /* Rank */ = {
 			isa = PBXGroup;
 			children = (
+				26A326C71F13BC1900AF698F /* Controller */,
+				26A326CC1F13BC1900AF698F /* Model */,
+				26A326CE1F13BC1900AF698F /* View */,
 				26FE84341EDEF15900CD1B2A /* Rank.storyboard */,
 				26FE84391EDEF73C00CD1B2A /* RankViewController.swift */,
 			);
@@ -835,6 +874,7 @@
 			files = (
 				26FE842D1EDEF00900CD1B2A /* MainViewController.swift in Sources */,
 				26ED181E1EF4D4A400C20ABC /* GiftListView.swift in Sources */,
+				26A326D31F13BC1900AF698F /* RankType.swift in Sources */,
 				26F096A01EFFFEF3008179A3 /* yudpsocket.c in Sources */,
 				26F3A4761F040202002524E1 /* SANGiftModel.swift in Sources */,
 				2664DC2B1EE85301002F0B20 /* FucusViewController.swift in Sources */,
@@ -843,9 +883,11 @@
 				2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */,
 				26CA16C61EEEE8DA00369635 /* Emitterable.swift in Sources */,
 				267570F81EF2891D009701A3 /* EmoticonView.swift in Sources */,
+				26A326D21F13BC1900AF698F /* WeekrankViewController.swift in Sources */,
 				26FE843F1EDEFAE900CD1B2A /* UIColor-Extension.swift in Sources */,
 				26F0969D1EFFFEF3008179A3 /* ysocket.swift in Sources */,
 				2684B3AC1F02AD2D0045C64A /* SANGiftChannelView.swift in Sources */,
+				26A326D01F13BC1900AF698F /* SubrankViewController.swift in Sources */,
 				2664DC231EE85090002F0B20 /* HomeViewModel.swift in Sources */,
 				2664DC271EE85284002F0B20 /* FucusViewModel.swift in Sources */,
 				26437FC41EF020D1006884DA /* NibLoadable.swift in Sources */,
@@ -871,6 +913,7 @@
 				26F096A11EFFFEF3008179A3 /* yudpsocket.swift in Sources */,
 				2664DC291EE852BD002F0B20 /* AnchorViewController.swift in Sources */,
 				26437FC81EF18474006884DA /* SANPageCollectionViewLayout.swift in Sources */,
+				26A326D11F13BC1900AF698F /* WeeklyRankViewController.swift in Sources */,
 				2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */,
 				26D489731EE9853C009F36C6 /* Const.swift in Sources */,
 				2664DC351EE85465002F0B20 /* KingfisherExtension.swift in Sources */,
@@ -880,6 +923,7 @@
 				267570FF1EF289EF009701A3 /* EmoticonViewModel.swift in Sources */,
 				26ED18171EF4D40200C20ABC /* GiftPackage.swift in Sources */,
 				26ED181B1EF4D45D00C20ABC /* GiftViewCell.swift in Sources */,
+				26A326CF1F13BC1900AF698F /* NormalRankViewController.swift in Sources */,
 				26B825FE1F112466002B7E3D /* RoomViewModel.swift in Sources */,
 				26F0969F1EFFFEF3008179A3 /* ytcpsocket.swift in Sources */,
 				2684B3AE1F02AD480045C64A /* SANGiftDigitLabel.swift in Sources */,
