@@ -77,24 +77,28 @@ class SANTitleView: UIView {
 // MARK:- 设置UI界面内容
 extension SANTitleView {
     fileprivate func setupUI() {
-        // 1.添加Scrollview
+        
+        //设置背景颜色 
+        backgroundColor = style.titleBgColor
+        
+        // 添加Scrollview
         addSubview(scrollView)
         
-        // 2.添加底部分割线
+        // 添加底部分割线
         addSubview(splitLineView)
         
-        // 3.设置所有的标题Label
+        // 设置所有的标题Label
         setupTitleLabels()
         
-        // 4.设置Label的位置
+        // 设置Label的位置
         setupTitleLabelsPosition()
         
-        // 5.设置底部的滚动条
+        // 设置底部的滚动条
         if style.isShowBottomLine {
             setupBottomLine()
         }
         
-        // 6.设置遮盖的View
+        // 设置遮盖的View
         if style.isShowCover {
             setupCoverView()
         }

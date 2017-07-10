@@ -21,6 +21,9 @@ class SANTitleStyle {
     var titleMargin : CGFloat = 20
     /// title的高度
     var titleHeight : CGFloat = 44
+    ///titleView的背景颜色
+    var titleBgColor : UIColor = .clear
+    
     
     /// 是否显示底部滚动条
     var isShowBottomLine : Bool = false
