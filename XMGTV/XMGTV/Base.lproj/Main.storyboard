@@ -12,10 +12,11 @@
         <scene sceneID="KYm-Sr-yol">
             <objects>
                 <tabBarController id="fuA-IH-cLJ" customClass="MainViewController" customModule="XMGTV" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="NAd-QV-J2t">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="NAd-QV-J2t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.81176470590000005" green="0.58431372550000005" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2jG-aO-RGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
