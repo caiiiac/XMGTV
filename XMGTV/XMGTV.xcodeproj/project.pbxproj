@@ -391,11 +391,11 @@
 		26A326C71F13BC1900AF698F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				26A326C81F13BC1900AF698F /* NormalRankViewController.swift */,
 				26A326C91F13BC1900AF698F /* SubrankViewController.swift */,
-				26A326CA1F13BC1900AF698F /* WeeklyRankViewController.swift */,
+				26A326C81F13BC1900AF698F /* NormalRankViewController.swift */,
 				26A326CB1F13BC1900AF698F /* WeekrankViewController.swift */,
 				26A326D41F13BCBB00AF698F /* DetailRankViewController.swift */,
+				26A326CA1F13BC1900AF698F /* WeeklyRankViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
