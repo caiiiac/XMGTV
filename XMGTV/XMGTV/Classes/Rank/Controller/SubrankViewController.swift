@@ -41,7 +41,7 @@ extension SubrankViewController {
     
     func setupSubrankUI(_ titles : [String]) {
     
-        let pageRect = CGRect(x: 0, y: 0, width: kScreenW, height: kScreenH - 64 - 44)
+        let pageRect = CGRect(x: 0, y: 0, width: kScreenW, height: kScreenH - 64 - 49)
         let titles = titles
         let style = SANTitleStyle()
         style.normalColor = UIColor(r: 0, g: 0, b: 0)
