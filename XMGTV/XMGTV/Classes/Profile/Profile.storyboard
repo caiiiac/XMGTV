@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NaK-Ij-bJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026.4000000000001" y="24.7376311844078"/>
+            <point key="canvasLocation" x="1924" y="-22"/>
         </scene>
         <!--我的-->
         <scene sceneID="UAL-uZ-TIi">
@@ -34,9 +34,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VTr-rr-BpN" customClass="SANNavigationController" customModule="XMGTV" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="mine-n" selectedImage="mine-p" id="xEa-bI-Sx4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1a9-Cx-jY6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="1a9-Cx-jY6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

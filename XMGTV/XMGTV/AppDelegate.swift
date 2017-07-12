@@ -18,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UINavigationBar.appearance().barTintColor = UIColor.black
+        
+        let attDict = [NSForegroundColorAttributeName : UIColor.clear ,
+                       NSFontAttributeName : UIFont.systemFont(ofSize: 0.1)
+        ]
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes(attDict , for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes(attDict , for: .highlighted)
+
         return true
     }
 

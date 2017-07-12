@@ -12,6 +12,7 @@ class SettingsViewController: BaseProfileViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "设置"
     }
     
 }
@@ -55,4 +56,12 @@ extension SettingsViewController {
         // 3.刷新表格
         tableView.reloadData()
     }
+}
+
+extension SettingsViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        navigationController?.pushViewController(SettingsViewController(), animated: true)
+    }
+    
 }
