@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="cgd-a6-piR" customClass="ProfileHeaderView" customModule="XMGTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_background" translatesAutoresizingMaskIntoConstraints="NO" id="U5u-OR-AiX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon0" translatesAutoresizingMaskIntoConstraints="NO" id="6Ej-Yr-EiN">
+                    <rect key="frame" x="148" y="30" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="6Ej-Yr-EiN" secondAttribute="height" multiplier="1:1" id="0DS-eM-Y62"/>
+                        <constraint firstAttribute="width" constant="80" id="FKB-oN-vqL"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caiiiac" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91M-qa-6k7">
+                    <rect key="frame" x="166" y="120" width="43" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEI-Ex-qY7">
+                    <rect key="frame" x="165" y="148" width="46" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6Ej-Yr-EiN" firstAttribute="top" secondItem="cgd-a6-piR" secondAttribute="top" constant="30" id="8wX-au-4C0"/>
+                <constraint firstItem="6Ej-Yr-EiN" firstAttribute="centerX" secondItem="cgd-a6-piR" secondAttribute="centerX" id="AdI-w5-3sz"/>
+                <constraint firstItem="U5u-OR-AiX" firstAttribute="top" secondItem="cgd-a6-piR" secondAttribute="top" id="FeY-88-oM2"/>
+                <constraint firstItem="gEI-Ex-qY7" firstAttribute="top" secondItem="91M-qa-6k7" secondAttribute="bottom" constant="10" id="RDk-53-bnI"/>
+                <constraint firstAttribute="bottom" secondItem="U5u-OR-AiX" secondAttribute="bottom" id="XfP-yg-XRC"/>
+                <constraint firstAttribute="trailing" secondItem="U5u-OR-AiX" secondAttribute="trailing" id="bH6-lY-afE"/>
+                <constraint firstItem="U5u-OR-AiX" firstAttribute="leading" secondItem="cgd-a6-piR" secondAttribute="leading" id="bzh-4M-K1q"/>
+                <constraint firstItem="91M-qa-6k7" firstAttribute="top" secondItem="6Ej-Yr-EiN" secondAttribute="bottom" constant="10" id="lUr-Qb-uAP"/>
+                <constraint firstItem="91M-qa-6k7" firstAttribute="centerX" secondItem="cgd-a6-piR" secondAttribute="centerX" id="qb3-VB-76w"/>
+                <constraint firstItem="gEI-Ex-qY7" firstAttribute="centerX" secondItem="cgd-a6-piR" secondAttribute="centerX" id="rwx-0n-dkW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="58" y="19"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon0" width="154" height="154"/>
+        <image name="mine_background" width="375" height="225"/>
+    </resources>
+</document>
