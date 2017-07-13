@@ -16,6 +16,14 @@
 		26437FC41EF020D1006884DA /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC31EF020D1006884DA /* NibLoadable.swift */; };
 		26437FC61EF183E9006884DA /* SANPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC51EF183E9006884DA /* SANPageCollectionView.swift */; };
 		26437FC81EF18474006884DA /* SANPageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26437FC71EF18474006884DA /* SANPageCollectionViewLayout.swift */; };
+		26611A5F1F1704B80088CD3A /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26611A5E1F1704B80088CD3A /* DiscoverViewController.swift */; };
+		26611A611F1705480088CD3A /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26611A601F1705480088CD3A /* CarouselView.swift */; };
+		26611A631F17055B0088CD3A /* CarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26611A621F17055B0088CD3A /* CarouselView.xib */; };
+		26611A651F1705C20088CD3A /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26611A641F1705C20088CD3A /* CarouselViewModel.swift */; };
+		26611A671F1705EE0088CD3A /* CarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26611A661F1705EE0088CD3A /* CarouselModel.swift */; };
+		26611A6A1F1706B10088CD3A /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26611A681F1706B10088CD3A /* DiscoverTableViewCell.swift */; };
+		26611A6D1F17075D0088CD3A /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26611A6C1F17075D0088CD3A /* DiscoverCollectionViewCell.swift */; };
+		26611A6F1F1707EB0088CD3A /* DiscoverContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26611A6E1F1707EB0088CD3A /* DiscoverContentViewModel.swift */; };
 		2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC141EE84EE0002F0B20 /* BaseModel.swift */; };
 		2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC161EE84F4F002F0B20 /* HomeType.swift */; };
 		2664DC191EE84F88002F0B20 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664DC181EE84F88002F0B20 /* AnchorModel.swift */; };
@@ -143,6 +151,14 @@
 		26437FC31EF020D1006884DA /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		26437FC51EF183E9006884DA /* SANPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageCollectionView.swift; sourceTree = "<group>"; };
 		26437FC71EF18474006884DA /* SANPageCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SANPageCollectionViewLayout.swift; sourceTree = "<group>"; };
+		26611A5E1F1704B80088CD3A /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		26611A601F1705480088CD3A /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		26611A621F17055B0088CD3A /* CarouselView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselView.xib; sourceTree = "<group>"; };
+		26611A641F1705C20088CD3A /* CarouselViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		26611A661F1705EE0088CD3A /* CarouselModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselModel.swift; sourceTree = "<group>"; };
+		26611A681F1706B10088CD3A /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
+		26611A6C1F17075D0088CD3A /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
+		26611A6E1F1707EB0088CD3A /* DiscoverContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverContentViewModel.swift; sourceTree = "<group>"; };
 		2664DC141EE84EE0002F0B20 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		2664DC161EE84F4F002F0B20 /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
 		2664DC181EE84F88002F0B20 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
@@ -290,6 +306,41 @@
 				2603FABF1F013D1C00055ABA /* ChatContentCell.xib */,
 			);
 			path = ChatContentView;
+			sourceTree = "<group>";
+		};
+		26611A5A1F1704A00088CD3A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		26611A5B1F1704A00088CD3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26611A661F1705EE0088CD3A /* CarouselModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26611A5C1F1704A00088CD3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26611A601F1705480088CD3A /* CarouselView.swift */,
+				26611A621F17055B0088CD3A /* CarouselView.xib */,
+				26611A681F1706B10088CD3A /* DiscoverTableViewCell.swift */,
+				26611A6C1F17075D0088CD3A /* DiscoverCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26611A5D1F1704A00088CD3A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				26611A641F1705C20088CD3A /* CarouselViewModel.swift */,
+				26611A6E1F1707EB0088CD3A /* DiscoverContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2664DC101EE84E8F002F0B20 /* Cell */ = {
@@ -661,7 +712,12 @@
 		26FE84261EDEEFB700CD1B2A /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				26611A5A1F1704A00088CD3A /* Controller */,
+				26611A5B1F1704A00088CD3A /* Model */,
+				26611A5C1F1704A00088CD3A /* View */,
+				26611A5D1F1704A00088CD3A /* ViewModel */,
 				26FE84301EDEF14300CD1B2A /* Discover.storyboard */,
+				26611A5E1F1704B80088CD3A /* DiscoverViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -871,6 +927,7 @@
 				26FE84351EDEF15900CD1B2A /* Rank.storyboard in Resources */,
 				26AF3A631F15C2E8005D2A13 /* ProfileHeaderView.xib in Resources */,
 				26C951B81EE6FBF5008DA4B3 /* types.plist in Resources */,
+				26611A631F17055B0088CD3A /* CarouselView.xib in Resources */,
 				2664DC2F1EE8534D002F0B20 /* HomeViewCell.xib in Resources */,
 				26F3A4781F040242002524E1 /* SANGiftChannelView.xib in Resources */,
 				26ED18201EF4D57100C20ABC /* GiftListView.xib in Resources */,
@@ -963,6 +1020,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26FE842D1EDEF00900CD1B2A /* MainViewController.swift in Sources */,
+				26611A671F1705EE0088CD3A /* CarouselModel.swift in Sources */,
 				26ED181E1EF4D4A400C20ABC /* GiftListView.swift in Sources */,
 				26A326D31F13BC1900AF698F /* RankType.swift in Sources */,
 				26F096A01EFFFEF3008179A3 /* yudpsocket.c in Sources */,
@@ -972,6 +1030,8 @@
 				2664DC2E1EE8534D002F0B20 /* HomeViewCell.swift in Sources */,
 				26AF3A651F15C507005D2A13 /* SettingsViewController.swift in Sources */,
 				2664DC251EE850D6002F0B20 /* NetworkTools.swift in Sources */,
+				26611A651F1705C20088CD3A /* CarouselViewModel.swift in Sources */,
+				26611A6D1F17075D0088CD3A /* DiscoverCollectionViewCell.swift in Sources */,
 				2698C3F21EE04BDD0063E5CF /* SANTitleStyle.swift in Sources */,
 				26CA16C61EEEE8DA00369635 /* Emitterable.swift in Sources */,
 				26AF3A551F15C0E0005D2A13 /* BaseProfileViewController.swift in Sources */,
@@ -994,6 +1054,7 @@
 				267570F41EF287D6009701A3 /* ChatToolsView.swift in Sources */,
 				2664DC151EE84EE0002F0B20 /* BaseModel.swift in Sources */,
 				26437FC61EF183E9006884DA /* SANPageCollectionView.swift in Sources */,
+				26611A6F1F1707EB0088CD3A /* DiscoverContentViewModel.swift in Sources */,
 				2664DC171EE84F4F002F0B20 /* HomeType.swift in Sources */,
 				26AF3A571F15C135005D2A13 /* ProfileViewController.swift in Sources */,
 				26AF3A611F15C2B7005D2A13 /* ProfileHeaderView.swift in Sources */,
@@ -1008,6 +1069,7 @@
 				26F096A31EFFFF5E008179A3 /* Immessage.proto.swift in Sources */,
 				2684B3AA1F02AD0A0045C64A /* SANGiftContainerView.swift in Sources */,
 				26AF3A5B1F15C1D3005D2A13 /* SettingsItemModel.swift in Sources */,
+				26611A611F1705480088CD3A /* CarouselView.swift in Sources */,
 				2664DC321EE85372002F0B20 /* FocusViewCell.swift in Sources */,
 				26AF3A591F15C169005D2A13 /* SettingsSectionModel.swift in Sources */,
 				26A326DA1F13BD4C00AF698F /* RankModel.swift in Sources */,
@@ -1015,6 +1077,7 @@
 				26F096A11EFFFEF3008179A3 /* yudpsocket.swift in Sources */,
 				2664DC291EE852BD002F0B20 /* AnchorViewController.swift in Sources */,
 				26437FC81EF18474006884DA /* SANPageCollectionViewLayout.swift in Sources */,
+				26611A6A1F1706B10088CD3A /* DiscoverTableViewCell.swift in Sources */,
 				26A326D11F13BC1900AF698F /* WeeklyRankViewController.swift in Sources */,
 				2698C3F01EE04BC90063E5CF /* SANContentView.swift in Sources */,
 				26AF3A5E1F15C245005D2A13 /* ProfileViewCell.swift in Sources */,
@@ -1027,6 +1090,7 @@
 				26ED18171EF4D40200C20ABC /* GiftPackage.swift in Sources */,
 				26ED181B1EF4D45D00C20ABC /* GiftViewCell.swift in Sources */,
 				26A326CF1F13BC1900AF698F /* NormalRankViewController.swift in Sources */,
+				26611A5F1F1704B80088CD3A /* DiscoverViewController.swift in Sources */,
 				26B825FE1F112466002B7E3D /* RoomViewModel.swift in Sources */,
 				26F0969F1EFFFEF3008179A3 /* ytcpsocket.swift in Sources */,
 				26A326D81F13BD2900AF698F /* DetailRankViewModel.swift in Sources */,
